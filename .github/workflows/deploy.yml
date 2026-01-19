@@ -1,0 +1,37 @@
+name: Deploy Landing Page
+
+on:
+  push:
+    branches: [staging, prod]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/staging'
+        run: |
+          aws s3 sync ./out s3://staging.onionloopafrika.com --delete
+          aws cloudfront create-invalidation --distribution-id "${{ secrets.CF_DISTRIBUTION_ID_STAGING }}" --paths "/*"
+
+      - name: Deploy to prod
+        if: github.ref == 'refs/heads/prod'
+        run: |
+          aws s3 sync ./out s3://www.onionloopafrika.com --delete
+          aws cloudfront create-invalidation --distribution-id "${{ secrets.CF_DISTRIBUTION_ID_PROD }}" --paths "/*"
