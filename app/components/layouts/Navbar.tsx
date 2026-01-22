@@ -3,6 +3,7 @@
 import { useState } from "react"
 import ModeToggle from "./ModeToggle"
 import ProductDropdown from "./ProductDropdown"
+import { OnionLoop } from "../icons/svgs"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,7 +15,7 @@ export default function Navbar() {
           {/* Logo and Mode Toggle */}
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-4">
-              <div className="text-2xl font-bold text-[#0F7942]">OnionLoop</div>
+              <OnionLoop />
               <div className="hidden md:block">
                 <ModeToggle />
               </div>
