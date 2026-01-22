@@ -3,7 +3,7 @@
 import { useMode } from "../../context/ModeContext";
 import React from 'react';
 import Image from "next/image";
-import { ArrowLeft, ScanIcon } from "../icons/svgs";
+import { AppStoreIconOld, ArrowLeft, PlayStoreIconOld, ScanIcon } from "../icons/svgs";
 
 export default function Hero() {
     const { mode } = useMode()
@@ -32,16 +32,16 @@ export default function Hero() {
                             {/* App Store Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
                                 <a
+                                    aria-label="App store icon"
                                     href="#"
-                                    className="inline-flex items-center justify-center bg-(--primary) text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors"
                                 >
-                                    Download on the App Store
+                                    <AppStoreIconOld />
                                 </a>
                                 <a
+                                    aria-label="Play store icon"
                                     href="#"
-                                    className="inline-flex items-center justify-center bg-(--primary) text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors"
                                 >
-                                    Google Play
+                                    <PlayStoreIconOld />
                                 </a>
                             </div>
                         </div>

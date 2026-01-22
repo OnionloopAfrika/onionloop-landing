@@ -59,12 +59,12 @@ const Main = () => {
     const { mode } = useMode();
     const data = mode === "personal" ? personal : business;
     return (
-        <div className="w-full min-h-screen max-w-7xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto mt-4 md:mt-8">
             <header className="w-full flex flex-col items-center justify-center">
                 <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium">
                     <Star /> {mode === "personal" ? "Everything You Need to Make Payment" : "Make Payments Work for You"}
                 </div>
-                <h1 className="text-4xl max-w-180 font-bold text-center mb-10 px-4">
+                <h1 className="text-4xl max-w-180 font-bold text-center p-4">
                     {mode === "personal" ? "Onionloop lets you make payments, receive money, and keep track of your transactions." : "Fewer errors, clearer records, and complete visibility over your money."}
                 </h1>
             </header>
