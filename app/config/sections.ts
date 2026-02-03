@@ -8,8 +8,8 @@ import Accordion from "../components/sections/Accordion"
 
 export const sectionRegistry = {
   hero: Hero,
-  section: Section,
   main: Main,
+  section: Section,
   cta: CTA,
   services: Services,
   accordion: Accordion,

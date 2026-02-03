@@ -4,6 +4,7 @@ import { useState } from "react"
 import ModeToggle from "./ModeToggle"
 import ProductDropdown from "./ProductDropdown"
 import { OnionLoop } from "../icons/svgs"
+import Link from "next/link"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -15,7 +16,9 @@ export default function Navbar() {
           {/* Logo and Mode Toggle */}
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-4">
+              <Link href="/" aria-label="OnionLoop Home">
               <OnionLoop />
+              </Link>
               <div className="hidden md:block">
                 <ModeToggle />
               </div>
@@ -25,10 +28,10 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <ProductDropdown />
-            <a href="#about" className="text-sm text-(--text-main) hover:text-gray-900 transition-colors">
+            <a href="/about" className="text-sm text-(--text-main) hover:text-gray-900 transition-colors">
               About Us
             </a>
-            <a href="#contact" className="text-sm text-(--text-main) hover:text-gray-900 transition-colors">
+            <a href="/contact" className="text-sm text-(--text-main) hover:text-gray-900 transition-colors">
               Contact Us
             </a>
             <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
@@ -62,13 +65,13 @@ export default function Navbar() {
             <ModeToggle />
             <ProductDropdown />
             <a
-              href="#about"
+              href="/about"
               className="block text-sm text-(--text-main) hover:text-gray-900 py-2 transition-colors"
             >
               About Us
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="block text-sm text-(--text-main) hover:text-gray-900 py-2 transition-colors"
             >
               Contact Us

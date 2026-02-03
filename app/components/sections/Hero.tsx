@@ -19,7 +19,7 @@ export default function Hero() {
                         <div className="space-y-4 z-1">
                             {/* Headline */}
                             <div className="">
-                                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-gentium">
+                                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-poppins">
                                     QR Payments Built <br /> for <span className="text-(--primary)">Trust</span> and <span className="text-(--primary)"> <br />Simplicity</span>
                                 </h1>
                             </div>
@@ -72,7 +72,7 @@ export default function Hero() {
 
                         {/* Headline */}
                         <div className="space-y-2">
-                            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white font-gentium">
+                            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white font-poppins">
                                 Secure and <span className="text-[#CCEA6F]">privacy focused</span> payments for businesses
                             </h1>
                         </div>
