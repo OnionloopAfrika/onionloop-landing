@@ -59,7 +59,7 @@ const Main = () => {
     const { mode } = useMode();
     const data = mode === "personal" ? personal : business;
     return (
-        <div className="w-full max-w-7xl mx-auto mt-4 md:mt-8">
+        <main className="w-full max-w-7xl mx-auto mt-4 md:mt-8">
             <header className="w-full flex flex-col items-center justify-center">
                 <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium">
                     <Star /> {mode === "personal" ? "Everything You Need to Make Payment" : "Make Payments Work for You"}
@@ -69,22 +69,22 @@ const Main = () => {
                 </h1>
             </header>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto p-3">
-                {data.map((item, index) => (
-                   <div key={index} className="bg-linear-to-b from-[#f2f2f2] via-[#f2f2f2] to-[#ffffff]  rounded-4xl p-6 flex flex-col items-start justify-center gap-2 shadow-md">
+                {data.map((item) => (
+                    <div key={item.title} className="bg-linear-to-b from-[#f2f2f2] via-[#f2f2f2] to-[#ffffff]  rounded-4xl p-6 flex flex-col items-start justify-center gap-2 shadow-md">
                         <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 p-4">
                             {item.icon}
                         </div>
                         <h2 className="text-2xl font-semibold text-(--text-secondary)">{item.title}</h2>
                         <p className="text-(--text-tertiary) text-sm">{item.description}</p>
                         <ul className="list-none text-(--text-tertiary) space-y-1">
-                            {item.tags.map((tag, tagIndex) => (
-                                <li key={tagIndex} className="flex items-center justify-start gap-2"><TickIcon /> {tag}</li>
+                            {item.tags.map((tag) => (
+                                <li key={tag} className="flex items-center justify-start gap-2"><TickIcon /> {tag}</li>
                             ))}
                         </ul>
                     </div>
                 ))}
             </div>
-        </div>
+        </main>
     )
 }
 

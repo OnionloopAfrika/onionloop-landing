@@ -9,7 +9,7 @@ export default function CTA() {
     const { mode } = useMode();
 
     return (
-        <section className="bg-(--primary) w-full mt-10 text-center relative overflow-hidden min-h-screen" id="cta">
+        <section className="bg-(--primary) w-full mt-10 text-center relative overflow-hidden min-h-[110dvh]" id="cta">
             <header className="w-full flex flex-col items-center justify-center">
                 <div className="text-white bg-white/25 flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium">
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">

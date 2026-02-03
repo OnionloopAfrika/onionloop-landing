@@ -5,9 +5,10 @@
   --text: #0f172a;
   --accent: #6366f1;
   --primary: #024E44;
-  --text-main: #1B1B1B;
+  --text-main: #131313;
   --text-secondary: #04907E;
   --text-tertiary: #6C6C6C;
+  --primary-light: #04907E;
 }
 html {
   scroll-behavior: smooth !important;
@@ -16,7 +17,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-pjs), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
 }
 
 .font-inter {
@@ -27,8 +28,15 @@ body {
   font-family: var(--font-gentium), system-ui, sans-serif;
 }
 
+.font-poppins {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
 .bg-gradient {
   background: linear-gradient(180deg, #FFFFFF 80%, #F5FFD6 98%);
+}
+.about-gradient {
+  background: linear-gradient(93.58deg, #ECFCBA 48.14%, #D6FEF9 97.6%);
 }
 
 .soft-fade {

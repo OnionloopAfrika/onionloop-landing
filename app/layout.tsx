@@ -1,7 +1,12 @@
 "use client";
 
 import "./globals.css";
-import { Inter, Plus_Jakarta_Sans, Gentium_Book_Plus } from "next/font/google";
+import {
+  Inter,
+  Plus_Jakarta_Sans,
+  Gentium_Book_Plus,
+  Poppins
+} from "next/font/google";
 import { ModeProvider, useMode } from "./context/ModeContext";
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
@@ -24,7 +29,13 @@ const gentium = Gentium_Book_Plus({
   weight: ["400", "700"],
 });
 
-function Shell({ children }: { children: React.ReactNode }) {
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins"
+});
+
+function Shell({ children }: Readonly<{ children: React.ReactNode }>) {
   const { mode } = useMode();
 
   return (
@@ -38,12 +49,12 @@ function Shell({ children }: { children: React.ReactNode }) {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${pjs.variable} ${gentium.variable} font-sans bg-(--bg) text-(--text)`}>
+      <body className={`${inter.variable} ${pjs.variable} ${gentium.variable} ${poppins.variable} font-sans bg-(--bg) text-(--text)`}>
         <ModeProvider>
           <Shell>{children}</Shell>
         </ModeProvider>
