@@ -1,91 +1,123 @@
 "use client"
 
+import Image from "next/image";
 import { useMode } from "@/app/context/ModeContext";
-import { CashIcon, DocumentIcon, DownloadIcon, MessageIcon, MoneyIcon, PayIcon, SendIcon, Star, TickIcon, UserIcon } from "../icons/svgs";
+import { Star } from "../icons/svgs";
 
 const Main = () => {
     const personal = [
         {
-            icon: <SendIcon />,
-            title: "Send Money Instantly",
-            description: "Send money to friends, family, or anyone with a QR code. No need to know their bank details or phone number.",
-            tags: ["Instant transfers", "No personal info shared", "Secure and private"]
+            title: "QR Payments",
+            description: "Receive money, send money, see your balance and withdraw money at any time.",
+            image: "/qr-payments.png", 
         },
         {
-            icon: <DownloadIcon />,
-            title: "Receive Payments",
-            description: "Generate your unique QR code and let others pay you instantly. Perfect for splitting bills or receiving funds.",
-            tags: ["Your personal QR code", "Receive anytime", "Track all payments"]
+            title: "Cash Services",
+            description: "Use a QR code to deposit or withdraw cash with verified Onionloop agents. Your balance updates immediately, and your money and information stay protected.",
+            image: "/cash-services.png",
         },
         {
-            icon: <PayIcon />,
-            title: "Pay Local Shops",
-            description: "Use Onionloop at your favorite local stores and merchants. Just scan their QR code and pay—no cash, no cards.",
-            tags: ["Contactless payments", "Fast checkout", "Digital receipts"]
+            title: "Bank Transfers",
+            description: "Move money inside Onionloop or send it to your connected bank account. Each transfer shows if it's pending, completed, or failed.",
+            image: "/bank-transfers.png",
         },
         {
-            icon: <MessageIcon />,
-            title: "Chat After Transactions",
-            description: "Need to clarify something? Chat directly with the person you paid or received money from, right in the app.",
-            tags: ["In-app messaging", "Transaction context", "Stay connected"]
+            title: "Personal Wallet",
+            description: "Receive money, make payments, check your balance and withdraw your money at any time.",
+            image: "/personal-wallet-f.png",
+        },
+        {
+            title: "Earn Onioncoins",
+            description: "Get coins as rewards when you send or receive money. They are tracked separately from your wallet balance.",
+            image: "/onioncoins.png",
+        },
+        {
+            title: "In-app messaging",
+            description: "Message Onionloop users about money you send or receive. Each chat is linked to the transaction so you can see it easily.",
+            image: "/messaging.png",
         }
-    ]
+    ];
+
     const business = [
         {
-            icon: <MoneyIcon />,
-            title: "Accurate Payment Records",
-            description: "Each payment is captured automatically as it happens, so nothing is missed or entered manually.",
-            tags: ["Automatic transaction records", "Instant payment confirmation", "Fewer reconciliation issues"]
+            title: "Business Wallet",
+            description: "Receive customer payments in your business wallet, check balance, and monitor how money moves in and out.",
+            image: "/business-wallet.png",
         },
         {
-            icon: <UserIcon />,
-            title: "Clear Business Identity",
-            description: "Your business username and avatar appear during every payment, so customers know exactly who they’re paying.",
-            tags: ["Business name shown on payment", "Clear payment confirmation", "Encourages repeat payments"]
+            title: "Payment Review",
+            description: "Customers check their payment details before sending money, so it doesn't go to the wrong account.",
+            image: "/payment-review.png",
         },
         {
-            icon: <DocumentIcon />,
-            title: "Easy Accounting",
-            description: "Payments are organised and summarised for you, making it easier to review activity and prepare accounts.",
-            tags: ["Daily, weekly, and monthly summaries", "Clear transaction history", "Less manual record-keeping"]
+            title: "Agency Banking",
+            description: "Offer customers the ability to deposit or withdraw cash through verified Onionloop agents, with each transaction clearly recorded in the system.",
+            image: "/agency-banking.png",
         },
         {
-            icon: <CashIcon />,
-            title: "Reduced Cash  Risks",
-            description: "Digital payments help limit cash-related losses and the need for manual counting.",
-            tags: ["Fewer cash handling errors", "Reduced theft exposure", "Cleaner end-of-day reconciliation"]
+            title: "Payment Resolution",
+            description: "Customers can report problems before a payment is completed, so any issues can be fixed quickly.",
+            image: "/payment-resolution.png",
+        },
+        {
+            title: "Business Management",
+            description: "Manage your inventory, add staff, assign roles, and control how payments are handled business across your business account.",
+            image: "/business-management.png",
+        },
+        {
+            title: "Withdrawals",
+            description: "Transfer money from your business wallet to your connected bank account. Balance updates after every withdrawal.",
+            image: "/withdrawals.png",
         }
-    ]
+    ];
+
     const { mode } = useMode();
     const data = mode === "personal" ? personal : business;
+
     return (
-        <main className="w-full max-w-7xl mx-auto mt-4 md:mt-8">
+        <main className="w-full max-w-7xl mx-auto mt-4 md:mt-8 pb-20">
             <header className="w-full flex flex-col items-center justify-center">
-                <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium">
-                    <Star /> {mode === "personal" ? "Everything You Need to Make Payment" : "Make Payments Work for You"}
+                <div className="bg-[#E6F4D7] text-[#4F7C1B] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full mt-10 mb-6 text-sm font-medium">
+                    <Star /> {mode === "personal" ? "More than just sending money" : "Core actions"}
                 </div>
-                <h1 className="text-4xl max-w-180 font-bold text-center p-4">
-                    {mode === "personal" ? "Onionloop lets you make payments, receive money, and keep track of your transactions." : "Fewer errors, clearer records, and complete visibility over your money."}
+                <h1 className="text-3xl md:text-4xl max-w-3xl font-bold text-center px-4 leading-tight text-(--text-main)">
+                    {mode === "personal" 
+                        ? "Onionloop lets you make payments, receive money, and keep track of your transactions" 
+                        : "Tools your business needs to get paid fast and run smoothly."}
                 </h1>
             </header>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto p-3">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto px-6">
                 {data.map((item) => (
-                    <div key={item.title} className="bg-linear-to-b from-[#f2f2f2] via-[#f2f2f2] to-[#ffffff]  rounded-4xl p-6 flex flex-col items-start justify-center gap-2 shadow-md">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 p-4">
-                            {item.icon}
+                    <div key={item.title} className="bg-white border border-gray-100 rounded-4xl overflow-hidden flex flex-col relative h-112.5 shadow-sm p-8">
+                        <div className="max-w-[70%]">
+                            <h2 className="text-[22px] font-bold text-(--primary-light) mb-3">{item.title}</h2>
+                            <p className="text-[#4D4D4D] text-[15px] leading-relaxed">
+                                {item.description}
+                            </p>
                         </div>
-                        <h2 className="text-2xl font-semibold text-(--text-secondary)">{item.title}</h2>
-                        <p className="text-(--text-tertiary) text-sm">{item.description}</p>
-                        <ul className="list-none text-(--text-tertiary) space-y-1">
-                            {item.tags.map((tag) => (
-                                <li key={tag} className="flex items-center justify-start gap-2"><TickIcon /> {tag}</li>
-                            ))}
-                        </ul>
+                        
+                        <button className="absolute bottom-8 left-8 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
+                            Learn more 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+
+                        <div className="absolute bottom-0 right-0 w-[60%] h-[70%] pointer-events-none">
+                            <Image 
+                                src={item.image} 
+                                alt={item.title}
+                                fill
+                                className="object-contain object-bottom-right"
+                                priority
+                            />
+                        </div>
                     </div>
                 ))}
             </div>
         </main>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;
