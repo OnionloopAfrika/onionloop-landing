@@ -3,7 +3,9 @@
 import { OnionLoop } from "../icons/svgs"
 import JoinTheLoop from "../sections/JoinTheLoop"
 
+
 export default function Footer() {
+
   return (
     <footer className="bg-white w-full px-4 py-8 md:py-12">
       <JoinTheLoop />
@@ -13,7 +15,7 @@ export default function Footer() {
         <div className="pb-6 border-b border-dotted border-gray-300">
           <h3 className="text-lg font-bold text-(--primary) mb-2">Join our newsletter</h3>
           <p className="text-sm text-(--text-tertiary) mb-4">Get all the latest Onionloop news delivered to your inbox.</p>
-          <div className="flex gap-2 border border-gray-300 rounded-lg">
+          <div className="flex gap-2 border border-gray-300 rounded-lg max-w-full">
             <input
               type="email"
               placeholder="Email address"

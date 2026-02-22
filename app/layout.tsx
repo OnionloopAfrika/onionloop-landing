@@ -10,6 +10,7 @@ import {
 import { ModeProvider, useMode } from "./context/ModeContext";
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
+import AOSProvider from "./context/AOSProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,9 +56,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${pjs.variable} ${gentium.variable} ${poppins.variable} font-sans bg-(--bg) text-(--text)`}>
+        <AOSProvider>
         <ModeProvider>
           <Shell>{children}</Shell>
         </ModeProvider>
+        </AOSProvider>
       </body>
     </html>
   );
