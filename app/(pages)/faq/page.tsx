@@ -50,6 +50,8 @@ const page = () => {
                     return (
                         <div
                             key={item.question}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
                             className="border border-gray-200 rounded-xl overflow-hidden bg-white"
                         >
                             <div className="h-16 flex items-center">
