@@ -71,8 +71,8 @@ export default function Footer() {
           <h4 className="text-sm font-normal text-(--text-tertiary) mb-3">Product For Business</h4>
           <ul className="space-y-2">
             <li>
-              <a href="/product/business/qr-payments" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">
-                QR Payment
+              <a href="/product/business/agency-banking" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">
+                Agency Banking
               </a>
             </li>
             <li>
@@ -87,7 +87,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="/product/business/business-wallet" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">
-                Money Transfers
+                Business Wallet
               </a>
             </li>
             <li>
@@ -272,8 +272,8 @@ export default function Footer() {
               <h4 className="text-sm font-normal text-(--text-tertiary) mb-3">Product For Business</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="/product/business/qr-payments" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">
-                    QR Payment
+                  <a href="/product/business/agency-banking" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">
+                    Agency Banking
                   </a>
                 </li>
                 <li>
@@ -288,7 +288,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="/product/business/business-wallet" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">
-                    Money Transfers
+                    Business Wallet
                   </a>
                 </li>
                 <li>

@@ -7,11 +7,11 @@ import { useMode } from "../../context/ModeContext"
 const productData = {
   personal: [
     { id: "qr-payments", title: "QR Payments", subtitle: "Send and receive money using QR codes." },
-    { id: "cash-services", title: "Cash Services", subtitle: "Deposit or withdraw cash through Onionloop agents." },
-    { id: "bank-transfer", title: "Bank Transfer", subtitle: "Send money from Onionloop to your bank account." },
+    { id: "payment-confirmation", title: "Cash Services", subtitle: "Deposit or withdraw cash through Onionloop agents." },
+    { id: "money-transfer", title: "Money Transfer", subtitle: "Send money from Onionloop to your bank account." },
     { id: "personal-wallet", title: "Personal Wallet", subtitle: "Hold and manage money for daily transactions." },
     { id: "in-app-messaging", title: "In- app Messaging", subtitle: "Communicate transactions with other Onionloop users." },
-    { id: "earn-rewards", title: "Earn Rewards", subtitle: "Get OnionCoins for successful transactions." },
+    { id: "rewards", title: "Earn Rewards", subtitle: "Get OnionCoins for successful transactions." },
   ],
   business: [
     { id: "agency-banking", title: "Agency Banking", subtitle: "Get OnionCoins for eligible transactions." },
