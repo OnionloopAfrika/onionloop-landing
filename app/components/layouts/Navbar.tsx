@@ -5,9 +5,11 @@ import ModeToggle from "./ModeToggle"
 import ProductDropdown from "./ProductDropdown"
 import { OnionLoop } from "../icons/svgs"
 import Link from "next/link"
+import { useMode } from "@/app/context/ModeContext"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const {mode} = useMode();
 
   return (
     <nav className="bg-white sticky top-0 z-50 border-b border-gray-200 w-[95%] mx-auto my-2 md:rounded-full rounded-3xl shadow-md">
@@ -34,9 +36,15 @@ export default function Navbar() {
             <a href="/contact" className="text-sm text-(--text-main) hover:text-gray-900 transition-colors">
               Contact Us
             </a>
-            <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
+            {mode === "personal" ? (
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
+              Download app
+            </button>
+            ) : (
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
               Create your account
             </button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,9 +84,15 @@ export default function Navbar() {
             >
               Contact Us
             </a>
-            <button className="w-full bg-(--primary) text-white text-sm rounded-lg px-6 py-3 transition-colors">
+            {mode === "personal" ? (
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
+              Download app
+            </button>
+            ) : (
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
               Create your account
             </button>
+            )}
           </div>
         )}
       </div>

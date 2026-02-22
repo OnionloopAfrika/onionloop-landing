@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Mobile Layout */}
       <div className="md:hidden space-y-6">
         {/* Newsletter */}
-        <div className="pb-6 border-b border-dotted border-gray-300">
+        <div className="pb-6 border-b border-dotted border-gray-300 w-full">
           <h3 className="text-lg font-bold text-(--primary) mb-2">Join our newsletter</h3>
           <p className="text-sm text-(--text-tertiary) mb-4">Get all the latest Onionloop news delivered to your inbox.</p>
           <div className="flex gap-2 border border-gray-300 rounded-lg max-w-full">

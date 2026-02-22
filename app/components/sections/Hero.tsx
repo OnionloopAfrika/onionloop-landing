@@ -19,8 +19,8 @@ export default function Hero() {
                         
                         <div className="space-y-4 z-10">
                             <div data-aos="fade-up">
-                                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-poppins">
-                                    QR Payments Built <br /> for <span className="text-(--primary)">Trust</span> and <span className="text-(--primary)"> <br />Simplicity</span>
+                                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-poppins text-(--primary-light)">
+                                    Avoid Sending <br /> Money To The Wrong <br />Account
                                 </h1>
                             </div>
 
@@ -29,7 +29,7 @@ export default function Hero() {
                                 data-aos-delay="150"
                                 className="text-base md:text-lg text-(--text-main) leading-relaxed max-w-100"
                             >
-                                Transfer money instantly using QR codes. No bank details shared. No errors. Just scan, verify, and pay.
+                                Scan the receiver QR code, confirm details and send money.
                             </p>
 
                             <div
@@ -80,7 +80,7 @@ export default function Hero() {
 
                         <div data-aos="fade-up" data-aos-delay="100" className="space-y-2">
                             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white font-poppins">
-                                Secure and <span className="text-[#CCEA6F]">privacy focused</span> payments for businesses
+                                Protect Your <span className="text-[#CCEA6F]">Business</span> From <span className="text-[#CCEA6F]">Fake Alerts</span>
                             </h1>
                         </div>
 
@@ -89,8 +89,7 @@ export default function Hero() {
                             data-aos-delay="200"
                             className="text-sm md:text-lg text-gray-100 leading-relaxed"
                         >
-                            OnionLoop allows you accept payments through QR codes and track every business transactions from your
-                            customer to dashboard in a single loop.
+                            Share your QR code. Customers scan in seconds and confirm your details before sending money.
                         </p>
 
                         <div
@@ -102,7 +101,7 @@ export default function Hero() {
                                 href="#"
                                 className="inline-flex justify-center gap-2 items-center text-(--primary) bg-[#FFFFFF] font-semibold hover:text-lime-400 transition-colors group p-3 rounded-xl"
                             >
-                                Create your account
+                                Open Your Business Account
                                 <ArrowLeft />
                             </a>
                         </div>
