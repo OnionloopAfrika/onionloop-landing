@@ -51,10 +51,10 @@ export default function Steps() {
   const steps = mode === "personal" ? personalSteps : businessSteps
 
   return (
-    <section className="py-16 px-4 md:px-8">
+    <section className="py-8 px-4 md:px-8">
       <div
         data-aos="fade-up"
-        className="max-w-4xl mx-auto border-4 border-[#CCEA6F] rounded-3xl p-8 md:p-12 bg-white overflow-hidden"
+        className="max-w-4xl mx-auto border-2 md:border-4 border-[#CCEA6F] rounded-2xl md:rounded-3xl p-6 md:p-12 bg-white"
       >
         <div className="relative">
           <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-[#CCEA6F]"></div>
@@ -65,23 +65,22 @@ export default function Steps() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
-                className="relative pl-10"
+                className="relative pl-8 md:pl-10"
               >
-                <div className="absolute top-0 left-px w-4 h-4 rounded-full bg-[#CCEA6F]"></div>
+                <div className="absolute top-1.5 left-0 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-[#CCEA6F]"></div>
 
                 <div className="flex flex-col items-start justify-start">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 text-left">
+                  <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-1 md:mb-2 text-left">
                     {step.title}
                   </h3>
 
-                  <p className="text-(--text-tertiary) text-xs leading-relaxed text-left wrap-break-word">
+                  <p className="text-(--text-tertiary) text-[11px] md:text-xs leading-relaxed text-left wrap-break-word w-full">
                     {step.description}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

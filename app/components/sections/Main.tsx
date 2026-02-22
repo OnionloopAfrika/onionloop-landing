@@ -19,14 +19,14 @@ const Main = () => {
             image: "/cash-services.png",
         },
         {
-            title: "Bank Transfers",
-            description: "Move money inside Onionloop or send it to your connected bank account. Each transfer shows if it's pending, completed, or failed.",
-            image: "/bank-transfers.png",
-        },
-        {
             title: "Personal Wallet",
             description: "Receive money, make payments, check your balance and withdraw your money at any time.",
             image: "/personal-wallet-f.png",
+        },
+        {
+            title: "Bank Transfers",
+            description: "Move money inside Onionloop or send it to your connected bank account. Each transfer shows if it's pending, completed, or failed.",
+            image: "/bank-transfers.png",
         },
         {
             title: "Earn Onioncoins",
