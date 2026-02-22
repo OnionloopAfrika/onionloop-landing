@@ -1,6 +1,6 @@
 "use client"
-
 import { useMode } from "../../context/ModeContext"
+import "aos/dist/aos.css"
 
 export default function Steps() {
   const { mode } = useMode()
@@ -52,20 +52,36 @@ export default function Steps() {
 
   return (
     <section className="py-16 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto border-4 border-[#CCEA6F] rounded-3xl p-8 md:p-12 bg-white overflow-hidden">
+      <div
+        data-aos="fade-up"
+        className="max-w-4xl mx-auto border-4 border-[#CCEA6F] rounded-3xl p-8 md:p-12 bg-white overflow-hidden"
+      >
         <div className="relative">
           <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-[#CCEA6F]"></div>
+
           <div className="space-y-8 md:space-y-12">
             {steps.map((step, index) => (
-              <div key={index} className="relative pl-10">
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+                className="relative pl-10"
+              >
                 <div className="absolute top-0 left-px w-4 h-4 rounded-full bg-[#CCEA6F]"></div>
-                <div  className="flex flex-col items-start justify-start">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 text-left">{step.title}</h3>
-                  <p className="text-(--text-tertiary) text-xs leading-relaxed text-left wrap-break-word">{step.description}</p>
+
+                <div className="flex flex-col items-start justify-start">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 text-left">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-(--text-tertiary) text-xs leading-relaxed text-left wrap-break-word">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

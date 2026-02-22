@@ -1,41 +1,55 @@
 "use client"
 
-import Image from "next/image";
-import { useMode } from "@/app/context/ModeContext";
-import { TickIcon } from "../icons/svgs";
+import Image from "next/image"
+import "aos/dist/aos.css"
+import { useMode } from "@/app/context/ModeContext"
+import { TickIcon } from "../icons/svgs"
 
 const TrustSection = () => {
-    const { mode } = useMode();
+    const { mode } = useMode()
 
     const personalPoints = [
         "QR codes won't show your account balance or private information to receiver.",
         "You see who's getting the money before you send it.",
         "You need your PIN or fingerprint to approve payments.",
         "Confirm your personal details and enjoy more benefits."
-    ];
+    ]
 
     const businessPoints = [
         "QR codes won't show your account balance or private details to your customers.",
         "Your customers see your business name and details before sending money.",
         "You need your PIN or fingerprint to approve transactions.",
         "Verify your business details and enjoy more benefits"
-    ];
+    ]
 
-    const points = mode === "personal" ? personalPoints : businessPoints;
+    const points = mode === "personal" ? personalPoints : businessPoints
 
     return (
         <section className="w-full max-w-5xl mx-auto py-16 px-6">
+            
             <div className="flex flex-col items-start gap-2 mb-10">
-                <h2 className="text-3xl font-bold text-(--primary-light)">
+                <h2
+                    data-aos="fade-up"
+                    className="text-3xl font-bold text-(--primary-light)"
+                >
                     Built for your safety and trust
                 </h2>
-                <p className="text-[#4D4D4D] text-lg max-w-2xl leading-snug">
+
+                <p
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    className="text-[#4D4D4D] text-lg max-w-2xl leading-snug"
+                >
                     Onionloop combines minimal data sharing, recipient confirmation, and identity verification to reduce mistakes and misuse during payments.
                 </p>
             </div>
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-                <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+                
+                <div
+                    data-aos="fade-right"
+                    className="w-full md:w-1/2 flex justify-center md:justify-start"
+                >
                     <div className="relative w-[320px] h-80 md:w-100 md:h-100">
                         <Image
                             src="/trust-shield.png"
@@ -50,7 +64,12 @@ const TrustSection = () => {
                 <div className="w-full md:w-1/2">
                     <ul className="space-y-6">
                         {points.map((point, index) => (
-                            <li key={index} className="flex items-start gap-4">
+                            <li
+                                key={index}
+                                data-aos="fade-up"
+                                data-aos-delay={index * 120}
+                                className="flex items-start gap-4"
+                            >
                                 <div className="mt-1 shrink-0">
                                     <TickIcon />
                                 </div>
@@ -61,9 +80,10 @@ const TrustSection = () => {
                         ))}
                     </ul>
                 </div>
+
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default TrustSection;
+export default TrustSection

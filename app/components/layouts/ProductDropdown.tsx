@@ -1,135 +1,79 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronDownIcon, CircleTicks, TicksIcon } from "../icons/svgs"
+import { useState, useMemo } from "react"
+import { ChevronDownIcon } from "../icons/svgs"
+import { useMode } from "../../context/ModeContext"
 
-const productCategories = [
-  {
-    id: "qr-payments",
-    title: "QR Payments",
-    subtitle: "Customers scan your business QR code to pay",
-    description: {
-      whatYouCanDo: [
-        "Get paid after customers scan your QR and confirms details.",
-        "Each business has a unique QR linked directly to their wallet.",
-        "No POS machines or terminals, just your phone or a printed QR.",
-        "Both sender and receiver get instant payment confirmation.",
-      ],
-      whyChoose: ["Faster checkout experience", "Lower operational costs", "Easy setup and instant access"],
-    },
-  },
-  {
-    id: "wallet",
-    title: "Wallet & Transaction History",
-    subtitle: "Track incoming payments",
-    description: {
-      whatYouCanDo: [
-        "View all your transaction history at a glance.",
-        "Monitor payment status in real-time.",
-        "Access transaction details anytime.",
-        "Download transaction reports.",
-      ],
-      whyChoose: ["Complete payment visibility", "Better financial management", "Easy record keeping"],
-    },
-  },
-  {
-    id: "reporting",
-    title: "Reporting & Insights",
-    subtitle: "Access all transactions for bookkeeping",
-    description: {
-      whatYouCanDo: [
-        "Generate detailed transaction reports.",
-        "Analyze payment patterns.",
-        "Track sales by period.",
-        "Export data for accounting.",
-      ],
-      whyChoose: ["Data-driven insights", "Simplified bookkeeping", "Better business planning"],
-    },
-  },
-]
+const productData = {
+  personal: [
+    { id: "qr-payments", title: "QR Payments", subtitle: "Send and receive money using QR codes." },
+    { id: "cash-services", title: "Cash Services", subtitle: "Deposit or withdraw cash through Onionloop agents." },
+    { id: "bank-transfer", title: "Bank Transfer", subtitle: "Send money from Onionloop to your bank account." },
+    { id: "personal-wallet", title: "Personal Wallet", subtitle: "Hold and manage money for daily transactions." },
+    { id: "in-app-messaging", title: "In- app Messaging", subtitle: "Communicate transactions with other Onionloop users." },
+    { id: "earn-rewards", title: "Earn Rewards", subtitle: "Get OnionCoins for successful transactions." },
+  ],
+  business: [
+    { id: "agency-banking", title: "Agency Banking", subtitle: "Get OnionCoins for eligible transactions." },
+    { id: "payment-review", title: "Payment Review", subtitle: "Customers check payment details before paying." },
+    { id: "payment-resolution", title: "Payment Resolution", subtitle: "Handle issues before a payment is completed." },
+    { id: "business-wallet", title: "Business Wallet", subtitle: "Receive and track all business payments." },
+    { id: "business-management", title: "Bussiness Management", subtitle: "Manage staff access and inventory." },
+    { id: "withdrawals", title: "Withdrawals", subtitle: "Withdraw and track all business payments." },
+  ],
+}
 
 export default function ProductDropdown() {
   const [isOpen, setIsOpen] = useState(false)
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
+  const { mode } = useMode()
+
+  const currentCategories = useMemo(() => {
+    return productData[mode as keyof typeof productData] || productData.personal
+  }, [mode])
 
   return (
-    <div className="relative group">
+    <div className="relative group w-full md:w-auto font-roboto">
+      {/* Trigger Button */}
       <button
+        onClick={() => setIsOpen(!isOpen)}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
-        className="flex items-center justify-center gap-2 text-sm text-(--text-main) hover:text-gray-900 transition-colors"
+        className="flex items-center justify-center md:justify-center gap-2 w-full md:w-auto text-sm text-(--text-main) hover:text-gray-900 transition-colors py-3 md:py-2 px-4 md:px-0"
       >
         Product
         <ChevronDownIcon isOpen={isOpen} />
       </button>
 
+      {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className="absolute right-[50%] left-[50%] translate-x-[-50%] top-full mt-2 bg-[#EFF9D2] rounded-lg shadow-xl p-6 z-50 min-w-225"
+          className="md:absolute md:right-[50%] md:left-[50%] md:translate-x-[-50%] md:top-full md:mt-2 bg-[#F6FCE9] md:rounded-[20px] md:shadow-xl p-4 md:p-4 z-50 w-full md:min-w-105"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
-          <div className="grid grid-cols-2 gap-8 bg-white p-6 rounded-lg">
-            {/* Product Categories Section */}
-            <div className="">
-              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-4">PRODUCT CATEGORIES</p>
-              <div className="space-y-3">
-                {productCategories.map((category) => (
-                  <div
-                    key={category.id}
-                    onMouseEnter={() => setHoveredCategory(category.id)}
-                    className="cursor-pointer p-3 rounded-md transition-colors hover:bg-[#EFF9D2]"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="text-lg mt-1"></div>
-                      <div>
-                        <p className="text-(--text-tertiary) text-sm font-bold">{category.title}</p>
-                        <p className="text-xs text-(--text-tertiary) mt-1">{category.subtitle}</p>
-                      </div>
-                    </div>
+          <div className="bg-white p-4 rounded-2xl space-y-4">
+            <p className="hidden md:block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 px-4">
+              PRODUCT FOR {mode.toUpperCase()}
+            </p>
+            
+            <div className="flex flex-col gap-4">
+              {currentCategories.map((category) => (
+                <a
+                  key={category.id}
+                  href={`/product/${mode}/${category.id}`}
+                  className="block cursor-pointer px-4 py-3 rounded-xl border border-gray-50 transition-all hover:bg-[#F6FCE9] hover:border-[#D9EBB3] group/item"
+                >
+                  <div className="flex flex-col gap-1">
+                    <p className="text-[14px] font-bold text-gray-900 tracking-[-0.24px] group-hover/item:text-[#0F7942]">
+                      {category.title}
+                    </p>
+                    <p className="text-[12px] text-gray-500 tracking-[-0.24px] leading-snug">
+                      {category.subtitle}
+                    </p>
                   </div>
-                ))}
-              </div>
+                </a>
+              ))}
             </div>
-
-            {/* Solutions Description Section */}
-            {hoveredCategory && (
-              <div className="bg-white p-4 rounded-md">
-                {(() => {
-                  const selected = productCategories.find((c) => c.id === hoveredCategory)
-                  if (!selected) return null
-
-                  return (
-                    <div>
-                      <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-4">OUR SOLUTIONS</p>
-
-                      <p className="text-sm font-semibold text-gray-900 mb-3 flex items-center justify-start gap-2"><TicksIcon /> What you can do:</p>
-                      <ul className="space-y-2 mb-4">
-                        {selected.description.whatYouCanDo.map((item, idx) => (
-                          <li key={idx} className="text-xs text-gray-700 flex gap-2">
-                            <span className="text-[#0F7942] font-bold">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <p className="text-sm font-semibold text-gray-900 mb-3 flex items-center justify-start gap-2 mt-4">
-                        <CircleTicks />
-                        Why businesses choose {selected.title}:
-                      </p>
-                      <ul className="space-y-2">
-                        {selected.description.whyChoose.map((item, idx) => (
-                          <li key={idx} className="text-xs text-gray-700 flex gap-2">
-                            <span className="text-[#0F7942] font-bold">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                })()}
-              </div>
-            )}
           </div>
         </div>
       )}

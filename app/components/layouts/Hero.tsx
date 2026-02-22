@@ -21,7 +21,7 @@ const HeroSection = ({
   features
 }: HeroSectionProps) => {
   return (
-    <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[70dvh] flex items-center justify-center relative soft-fade">
+    <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[70dvh] flex items-center justify-center">
       <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-175 -z-1"></div>
 
       <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center gap-6">

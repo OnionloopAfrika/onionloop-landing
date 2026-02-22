@@ -1,13 +1,28 @@
+"use client"
+
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 import { TickIcon } from "@/app/components/icons/svgs"
 import Image from "next/image"
 
-
 const page = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-in-out",
+        })
+    }, [])
+
     return (
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
-                <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center gap-6">
+                <div 
+                    className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center gap-6"
+                    data-aos="fade-up"
+                >
                     <span className="text-(--primary) inline-flex justify-center items-center bg-[#CCEA6F80] gap-2 px-4 py-2 rounded-full font-normal">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.93694 15.5C9.84766 15.1539 9.66728 14.8381 9.41456 14.5854C9.16184 14.3327 8.84601 14.1523 8.49994 14.063L2.36494 12.481C2.26027 12.4513 2.16815 12.3883 2.10255 12.3014C2.03696 12.2146 2.00146 12.1088 2.00146 12C2.00146 11.8912 2.03696 11.7854 2.10255 11.6986C2.16815 11.6118 2.26027 11.5487 2.36494 11.519L8.49994 9.93601C8.84589 9.84681 9.16163 9.66658 9.41434 9.41404C9.66705 9.16151 9.84751 8.84589 9.93694 8.50001L11.5189 2.36501C11.5483 2.25992 11.6113 2.16735 11.6983 2.1014C11.7852 2.03545 11.8913 1.99976 12.0004 1.99976C12.1096 1.99976 12.2157 2.03545 12.3026 2.1014C12.3896 2.16735 12.4525 2.25992 12.4819 2.36501L14.0629 8.50001C14.1522 8.84608 14.3326 9.1619 14.5853 9.41462C14.838 9.66734 15.1539 9.84773 15.4999 9.93701L21.6349 11.518C21.7404 11.5471 21.8335 11.61 21.8998 11.6971C21.9661 11.7841 22.002 11.8906 22.002 12C22.002 12.1094 21.9661 12.2159 21.8998 12.3029C21.8335 12.39 21.7404 12.4529 21.6349 12.482L15.4999 14.063C15.1539 14.1523 14.838 14.3327 14.5853 14.5854C14.3326 14.8381 14.1522 15.1539 14.0629 15.5L12.4809 21.635C12.4515 21.7401 12.3886 21.8327 12.3016 21.8986C12.2147 21.9646 12.1086 22.0003 11.9994 22.0003C11.8903 22.0003 11.7842 21.9646 11.6973 21.8986C11.6103 21.8327 11.5473 21.7401 11.5179 21.635L9.93694 15.5Z" stroke="#024E44" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -43,7 +58,7 @@ const page = () => {
 
             <div className="w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-4 grid px-4 md:px-6 mt-10 mb-20 justify-center items-center">
                 {/* grid 1 */}
-                <div className="w-full max-w-110 h-full mx-auto">
+                <div className="w-full max-w-110 h-full mx-auto" data-aos="fade-right">
                     <h1 className="text-left font-bold text-4xl text-(--text-main)">We started with
                         a simple question.</h1>
                     <p className="text-sm text-(--text-main) text-justify mt-4">Why should sending money be harder than sending a message?</p>
@@ -54,7 +69,7 @@ const page = () => {
                         Onionloop was built to make everyday payments simple. We bridge the gap between complex banking systems and how people and businesses actually move money using QR payments and secure wallets to make transactions clear, easy, and rewarding.</p>
                 </div>
                 {/* grid 2 */}
-                <div className="w-full max-w-110 h-80 relative mt-8 md:mt-0">
+                <div className="w-full max-w-110 h-80 relative mt-8 md:mt-0" data-aos="fade-left">
                     <div className="absolute inset-0 bg-lime-100 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
 
                     <Image src="/AboutImage2.png" alt="Hero Personal" layout="fill" objectFit="contain" />
@@ -62,7 +77,7 @@ const page = () => {
             </div>
 
             <div className="w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 grid px-4 md:px-6 mt-10 mb-20 justify-center items-center gap-4">
-                <div className="w-full max-w-110 h-full mx-auto">
+                <div className="w-full max-w-110 h-full mx-auto" data-aos="fade-right">
                     <span className="text-(--primary) inline-flex justify-center items-center bg-[#CCEA6F80] gap-2 px-4 py-2 rounded-full font-bold">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -75,7 +90,7 @@ const page = () => {
                     <p className="text-sm text-(--text-main) text-justify mt-4">We’re building payment tools that remove barriers between people and their money — no account numbers to remember, no sensitive details to share, and no unnecessary delays.</p>
                     <p className="text-sm text-(--text-main) text-justify mt-4">Everyone in Africa should be able to send money, pay locally, and run a business with tools that are secure, reliable, and rewarding. That’s what we’re building.</p>
                 </div>
-                <div className="w-full max-w-110 h-full mx-auto bg-[#F2F2F2] rounded-2xl mt-8 md:mt-0">
+                <div className="w-full max-w-110 h-full mx-auto bg-[#F2F2F2] rounded-2xl mt-8 md:mt-0" data-aos="zoom-in">
                     <div className="p-6 flex items-start justify-center gap-2">
                         <div className="flex items-center justify-center w-10 h-10 bg-white rounded-xl mb-4 p-2">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +109,6 @@ const page = () => {
                                 <path d="M18 18.75C19.6569 18.75 21 17.4069 21 15.75C21 14.0931 19.6569 12.75 18 12.75C16.3431 12.75 15 14.0931 15 15.75C15 17.4069 16.3431 18.75 18 18.75Z" stroke="#04907E" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M18 18.75V23.25" stroke="#04907E" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-
                         </div>
                         <div className="w-full">
                             <h3 className="text-2xl font-semibold mb-2 text-(--text-secondary)">Secure & Encrypted  </h3>
@@ -105,7 +119,10 @@ const page = () => {
             </div>
 
             <div className="w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-4 grid px-4 md:px-6 mt-10 mb-20 justify-center items-center">
-                <div className="rounded-2xl bg-[#F2F2F2] p-6 flex flex-col items-start justify-center gap-2 max-w-110 mx-auto">
+                <div 
+                    className="rounded-2xl bg-[#F2F2F2] p-6 flex flex-col items-start justify-center gap-2 max-w-110 mx-auto"
+                    data-aos="fade-up"
+                >
                     <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 p-2 text-4xl">
                         🌍
                     </div>
@@ -119,7 +136,7 @@ const page = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="w-full max-w-110 h-full mx-auto mt-8 md:mt-0">
+                <div className="w-full max-w-110 h-full mx-auto mt-8 md:mt-0" data-aos="fade-left">
                     <span className="text-(--primary) inline-flex justify-center items-center bg-[#CCEA6F80] gap-2 px-4 py-2 rounded-full font-bold">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -137,4 +154,4 @@ const page = () => {
     )
 }
 
-export default page
+export default page;

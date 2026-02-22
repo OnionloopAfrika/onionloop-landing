@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDownIcon, Star } from "../icons/svgs";
+import "aos/dist/aos.css"
 
 const faq = [
     {
@@ -57,6 +58,8 @@ const Accordion = () => {
                     return (
                         <div
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
                             className="border border-gray-200 rounded-xl overflow-hidden bg-white"
                         >
                             <div className="h-16 flex items-center">
@@ -72,8 +75,8 @@ const Accordion = () => {
                             {isOpen && (
                                 <div
                                     className={`grid transition-all duration-300 ${isOpen
-                                            ? "grid-rows-[1fr] opacity-100"
-                                            : "grid-rows-[0fr] opacity-0"
+                                        ? "grid-rows-[1fr] opacity-100"
+                                        : "grid-rows-[0fr] opacity-0"
                                         }`}
                                 >
                                     <div className="overflow-hidden px-6 pb-6 text-(--text-tertiary) text-sm">
