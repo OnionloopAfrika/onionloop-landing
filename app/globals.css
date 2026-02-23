@@ -10,6 +10,30 @@
   --text-tertiary: #6C6C6C;
   --primary-light: #04907E;
 }
+
+@layer utilities {
+  .scrollbar-green {
+    scrollbar-width: thin;
+    scrollbar-color: #04907E transparent;
+  }
+
+  .scrollbar-green::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .scrollbar-green::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-green::-webkit-scrollbar-thumb {
+    background-color: #04907E;
+    border-radius: 999px;
+  }
+
+  .scrollbar-green::-webkit-scrollbar-thumb:hover {
+    background-color: #037065;
+  }
+}
 html {
   scroll-behavior: smooth !important;
 }
