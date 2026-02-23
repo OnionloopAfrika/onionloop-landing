@@ -10,7 +10,7 @@ const productData = {
     { id: "payment-confirmation", title: "Cash Services", subtitle: "Deposit or withdraw cash through Onionloop agents." },
     { id: "money-transfer", title: "Money Transfer", subtitle: "Send money from Onionloop to your bank account." },
     { id: "personal-wallet", title: "Personal Wallet", subtitle: "Hold and manage money for daily transactions." },
-    { id: "in-app-messaging", title: "In- app Messaging", subtitle: "Communicate transactions with other Onionloop users." },
+    { id: "in-app-messaging", title: "In-app Messaging", subtitle: "Communicate transactions with other Onionloop users." },
     { id: "rewards", title: "Earn Rewards", subtitle: "Get OnionCoins for successful transactions." },
   ],
   business: [
@@ -18,7 +18,7 @@ const productData = {
     { id: "payment-review", title: "Payment Review", subtitle: "Customers check payment details before paying." },
     { id: "payment-resolution", title: "Payment Resolution", subtitle: "Handle issues before a payment is completed." },
     { id: "business-wallet", title: "Business Wallet", subtitle: "Receive and track all business payments." },
-    { id: "business-management", title: "Bussiness Management", subtitle: "Manage staff access and inventory." },
+    { id: "business-management", title: "Business Management", subtitle: "Manage staff access and inventory." },
     { id: "withdrawals", title: "Withdrawals", subtitle: "Withdraw and track all business payments." },
   ],
 }
@@ -31,14 +31,22 @@ export default function ProductDropdown() {
     return productData[mode as keyof typeof productData] || productData.personal
   }, [mode])
 
+  const handleMouseEnter = () => {
+    if (window.innerWidth >= 768) setIsOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    if (window.innerWidth >= 768) setIsOpen(false)
+  }
+
   return (
-    <div className="relative group w-full md:w-auto font-roboto">
+    <div className="relative w-full md:w-auto font-roboto">
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-        className="flex items-center justify-center md:justify-center gap-2 w-full md:w-auto text-sm text-(--text-main) hover:text-gray-900 transition-colors py-3 md:py-2 px-4 md:px-0"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="flex items-center justify-center gap-2 w-full md:w-auto text-sm text-(--text-main) hover:text-gray-900 transition-colors py-3 md:py-2 px-4 md:px-0"
       >
         Product
         <ChevronDownIcon isOpen={isOpen} />
@@ -47,15 +55,15 @@ export default function ProductDropdown() {
       {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className="md:absolute md:right-[50%] md:left-[50%] md:translate-x-[-50%] md:top-full md:mt-2 bg-[#F6FCE9] md:rounded-[20px] md:shadow-xl p-4 md:p-4 z-50 w-full md:min-w-105"
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
+          className="md:absolute md:right-[50%] md:left-[50%] md:translate-x-[-50%] md:top-full md:mt-2 bg-[#F6FCE9] md:rounded-[20px] md:shadow-xl p-4 z-50 w-full md:min-w-105 max-h-[55vh] overflow-y-auto md:max-h-none md:overflow-visible scrollbar-green"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <div className="bg-white p-4 rounded-2xl space-y-4">
             <p className="hidden md:block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 px-4">
               PRODUCT FOR {mode.toUpperCase()}
             </p>
-            
+
             <div className="flex flex-col gap-4">
               {currentCategories.map((category) => (
                 <a
