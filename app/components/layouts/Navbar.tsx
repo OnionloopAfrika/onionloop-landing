@@ -9,17 +9,18 @@ import { useMode } from "@/app/context/ModeContext"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const {mode} = useMode();
+  const { mode } = useMode()
 
   return (
     <nav className="bg-white sticky top-0 z-50 border-b border-gray-200 w-[95%] mx-auto my-2 md:rounded-full rounded-3xl shadow-md">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+
           {/* Logo and Mode Toggle */}
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-4">
               <Link href="/" aria-label="OnionLoop Home">
-              <OnionLoop />
+                <OnionLoop />
               </Link>
               <div className="hidden md:block">
                 <ModeToggle />
@@ -38,12 +39,12 @@ export default function Navbar() {
             </a>
             {mode === "personal" ? (
               <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
-              Download app
-            </button>
+                Download app
+              </button>
             ) : (
               <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
-              Create your account
-            </button>
+                Create your account
+              </button>
             )}
           </div>
 
@@ -65,11 +66,12 @@ export default function Navbar() {
               )}
             </button>
           </div>
+
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200 space-y-4 pt-4 flex items-center flex-col justify-center">
+          <div className="md:hidden pb-4 border-t border-gray-200 pt-4 flex flex-col items-center gap-4 max-h-[75vh] overflow-y-auto">
             <ModeToggle />
             <ProductDropdown />
             <a
@@ -86,15 +88,16 @@ export default function Navbar() {
             </a>
             {mode === "personal" ? (
               <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
-              Download app
-            </button>
+                Download app
+              </button>
             ) : (
               <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
-              Create your account
-            </button>
+                Create your account
+              </button>
             )}
           </div>
         )}
+
       </div>
     </nav>
   )
