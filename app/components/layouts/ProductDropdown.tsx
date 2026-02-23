@@ -55,7 +55,7 @@ export default function ProductDropdown() {
       {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className="md:absolute md:right-[50%] md:left-[50%] md:translate-x-[-50%] md:top-full md:mt-2 bg-[#F6FCE9] md:rounded-[20px] md:shadow-xl p-4 z-50 w-full md:min-w-105 max-h-[55vh] overflow-y-auto md:max-h-none md:overflow-visible"
+          className="md:absolute md:right-[50%] md:left-[50%] md:translate-x-[-50%] md:top-full md:mt-2 bg-[#F6FCE9] md:rounded-[20px] md:shadow-xl p-4 z-50 w-full md:min-w-105 max-h-[55vh] overflow-y-auto md:max-h-none md:overflow-visible scrollbar-green"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

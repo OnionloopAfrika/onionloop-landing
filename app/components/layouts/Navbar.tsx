@@ -71,7 +71,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200 pt-4 flex flex-col items-center gap-4 max-h-[75vh] overflow-y-auto">
+          <div className="md:hidden pb-4 border-t border-gray-200 pt-4 flex flex-col items-center gap-4 max-h-[75vh] overflow-y-auto scrollbar-green">
             <ModeToggle />
             <ProductDropdown />
             <a
