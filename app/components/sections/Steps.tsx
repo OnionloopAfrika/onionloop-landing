@@ -74,7 +74,7 @@ export default function Steps() {
                     {step.title}
                   </h3>
 
-                  <p className="text-(--text-tertiary) text-[11px] md:text-xs leading-relaxed text-left wrap-break-word w-full">
+                  <p className="text-(--text-tertiary) text-sm leading-relaxed text-left wrap-break-word w-full">
                     {step.description}
                   </p>
                 </div>
