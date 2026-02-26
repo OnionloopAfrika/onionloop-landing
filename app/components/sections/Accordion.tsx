@@ -65,9 +65,9 @@ const Accordion = () => {
                             <div className="h-16 flex items-center">
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                                    className="w-full flex items-center justify-between px-6 text-left font-medium text-gray-900"
+                                    className="w-full flex items-center justify-between px-6 text-left font-medium text-gray-900 gap-2"
                                 >
-                                    <span className="leading-none">{item.question}</span>
+                                    <span className="leading-none inline-flex w-[95%] text-sm">{item.question}</span>
                                     <ChevronDownIcon isOpen={isOpen} />
                                 </button>
                             </div>

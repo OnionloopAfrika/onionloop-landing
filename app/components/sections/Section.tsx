@@ -89,7 +89,7 @@ const Section = () => {
     const data = mode === "personal" ? personal : business
 
     return (
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto pb-20">
             <header className="w-full flex flex-col items-center justify-center">
                 <div
                     data-aos="fade-up"
@@ -117,7 +117,7 @@ const Section = () => {
                         data-aos-delay={index * 120}
                         className="bg-[#F2F2F2] rounded-3xl p-6 flex items-start justify-center gap-2"
                     >
-                        <div className="flex items-center justify-center w-10 h-10 bg-white rounded-xl mb-4 p-2">
+                        <div className="flex items-center justify-center w-10 h-10 bg-white rounded-xl mb-4 p-2 shrink-0">
                             {item.icon}
                         </div>
                         <div className="w-full">
@@ -134,33 +134,28 @@ const Section = () => {
 
             <div
                 data-aos="zoom-in"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center mt-12 mb-6"
             >
-                {mode === "personal" && (
-                    <div className="mt-10">
-                        <Link
-                            href="#cta"
-                            className="bg-(--primary) text-white px-6 py-3 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors"
-                        >
-                            Download App
-                        </Link>
-                    </div>
-                )}
-                {mode === "business" && (
-                    <div className="mt-10">
-                        <button className="bg-(--primary) text-white px-6 py-3 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors">
-                            Open Your Business Account
-                        </button>
-                    </div>
+                {mode === "personal" ? (
+                    <Link
+                        href="#cta"
+                        className="inline-block bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg"
+                    >
+                        Download App
+                    </Link>
+                ) : (
+                    <button className="bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg">
+                        Open Your Business Account
+                    </button>
                 )}
             </div>
 
             {mode === "business" && (
-                <div className="w-full max-w-7xl mx-auto mt-10 p-4">
+                <div className="w-full max-w-7xl mx-auto mt-20 p-4 border-t border-gray-100">
                     <header className="w-full">
                         <div
                             data-aos="fade-up"
-                            className="bg-[#CCEA6F80] text-(--primary) inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-normal"
+                            className="bg-[#CCEA6F80] text-(--primary) inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full mb-6 font-normal"
                         >
                             <Star /> Become an Onionloop agent
                         </div>
@@ -168,29 +163,29 @@ const Section = () => {
                         <h1
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="text-base max-w-200 font-normal text-justify"
+                            className="text-lg max-w-3xl font-normal text-justify text-(--text-secondary)"
                         >
                             Onionloop Agents provide cash deposit or withdrawal service for customers. As an agent, you help customers move money between cash and their onionloop wallet, verify transaction using QR codes, and support customers when clarification is needed after a transaction
                         </h1>
                     </header>
 
-                    <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-3 my-10">
-                        <div className="w-full max-w-150 space-y-2">
+                    <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
+                        <div className="w-full max-w-150 space-y-6">
                             {agentData.map((a, index) => (
                                 <div
                                     key={index}
                                     data-aos="fade-up"
                                     data-aos-delay={index * 120}
-                                    className="flex w-full justify-start items-start"
+                                    className="flex w-full justify-start items-start gap-3"
                                 >
-                                    <span className="w-10 h-full p-1">
+                                    <span className="shrink-0 mt-1">
                                         <TickIcon />
                                     </span>
-                                    <div className="w-full space-y-1 flex flex-col items-start justify-start">
-                                        <h1 className="text-base font-bold">
+                                    <div className="w-full flex flex-col items-start justify-start">
+                                        <h1 className="text-base font-bold text-(--text-secondary)">
                                             {a.title}
                                         </h1>
-                                        <h2 className="text-base font-normal">
+                                        <h2 className="text-base font-normal text-(--text-tertiary)">
                                             {a.description}
                                         </h2>
                                     </div>
@@ -200,11 +195,11 @@ const Section = () => {
 
                         <div
                             data-aos="fade-left"
-                            className="w-full mx-auto my-auto max-w-100 aspect-4/5 rounded-2xl overflow-hidden shrink-0 h-75 relative flex item-center justify-center"
+                            className="w-full max-w-md aspect-square rounded-3xl overflow-hidden shrink-0 relative shadow-xl"
                         >
                             <Image
                                 src="/ol-agent.png"
-                                alt=""
+                                alt="Onionloop Agent"
                                 fill
                                 className="object-cover"
                             />
@@ -213,9 +208,9 @@ const Section = () => {
 
                     <div
                         data-aos="zoom-in"
-                        className="mt-10 w-full flex items-center justify-center"
+                        className="mt-12 w-full flex items-center justify-center pb-10"
                     >
-                        <button className="bg-(--primary) text-white px-6 py-3 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors">
+                        <button className="bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg">
                             Become an Onionloop agent
                         </button>
                     </div>
