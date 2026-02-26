@@ -73,7 +73,7 @@ const TrustSection = () => {
                                 <div className="mt-1 shrink-0">
                                     <TickIcon />
                                 </div>
-                                <span className="text-[#1A1A1A] text-lg font-medium leading-tight">
+                                <span className="text-[#1A1A1A] text-base font-medium leading-tight">
                                     {point}
                                 </span>
                             </li>
