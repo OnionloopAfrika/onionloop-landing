@@ -4,5 +4,13 @@
   ],
   "hints": {
     "button-type": "off"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not chrome <= 112",
+    "not ios_saf <= 26",
+    "not safari <= 26",
+    "not samsung <= 28"
+  ]
 }

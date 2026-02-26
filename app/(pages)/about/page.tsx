@@ -132,7 +132,7 @@ const page = () => {
                         inclusion isn’t just a goal, it’s reality.</p>
                     <ul className="list-none text-(--text-main) space-y-1">
                         {["100 million users across Africa by 2030", "Every business, big or small, accepting QR payments.", "Financial tools that empower, not complicate."].map((tag) => (
-                            <li key={tag} className="flex items-center justify-start gap-2"><TickIcon /> {tag}</li>
+                            <li key={tag} className="flex items-center justify-start gap-2 text-sm"><TickIcon /> {tag}</li>
                         ))}
                     </ul>
                 </div>
