@@ -159,7 +159,7 @@ export const CashIcon = () => (
 )
 
 export const GooglePlayBlackIcon = () => (
-    <svg width="189" height="56" viewBox="0 0 189 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="140" height="56" viewBox="0 0 189 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="0.65" y="0.65" width="187.7" height="54.7" rx="5.85" fill="#1B1B1B" />
         <rect x="0.65" y="0.65" width="187.7" height="54.7" rx="5.85" stroke="#999999" strokeWidth="1.3" />
         <g filter="url(#filter0_ii_250_877)">
@@ -239,7 +239,7 @@ export const GooglePlayBlackIcon = () => (
 )
 
 export const AppleStoreIcon = () => (
-    <svg width="168" height="56" viewBox="0 0 168 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="140" height="56" viewBox="0 0 168 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="0.65" y="0.65" width="166.7" height="54.7" rx="8.45" fill="#1B1B1B" />
         <rect x="0.65" y="0.65" width="166.7" height="54.7" rx="8.45" stroke="#999999" strokeWidth="1.3" />
         <path d="M34.6764 28.421C34.7068 26.0676 35.9706 23.8408 37.9756 22.6081C36.7108 20.8017 34.5922 19.6563 32.388 19.5874C30.0371 19.3406 27.7579 20.9941 26.5599 20.9941C25.3388 20.9941 23.4943 19.6119 21.508 19.6527C18.9191 19.7364 16.5055 21.2083 15.246 23.4717C12.5384 28.1595 14.558 35.049 17.1516 38.8383C18.4493 40.6937 19.9659 42.7664 21.9503 42.6929C23.8922 42.6123 24.6175 41.4546 26.9615 41.4546C29.2837 41.4546 29.9642 42.6929 31.9889 42.6461C34.0726 42.6123 35.3855 40.7824 36.6376 38.9094C37.57 37.5872 38.2874 36.126 38.7634 34.5798C36.3146 33.5441 34.6793 31.0798 34.6764 28.421Z" fill="white" />
@@ -288,7 +288,7 @@ export const CircleTicks = () => (
 )
 
 export const AppStoreIconOld = () => (
-    <svg width="168" height="56" viewBox="0 0 168 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="140" height="56" viewBox="0 0 168 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="0.65" y="0.65" width="166.7" height="54.7" rx="11.35" fill="#024E44" />
         <rect x="0.65" y="0.65" width="166.7" height="54.7" rx="11.35" stroke="#999999" strokeWidth="1.3" />
         <path d="M34.6764 28.4211C34.7068 26.0677 35.9706 23.8409 37.9756 22.6082C36.7108 20.8018 34.5922 19.6564 32.388 19.5875C30.0371 19.3407 27.7579 20.9942 26.5599 20.9942C25.3388 20.9942 23.4943 19.612 21.508 19.6529C18.9191 19.7365 16.5055 21.2084 15.246 23.4719C12.5384 28.1597 14.558 35.0491 17.1516 38.8384C18.4493 40.6939 19.9659 42.7665 21.9503 42.693C23.8922 42.6125 24.6175 41.4547 26.9615 41.4547C29.2837 41.4547 29.9642 42.693 31.9889 42.6463C34.0726 42.6124 35.3855 40.7825 36.6376 38.9095C37.57 37.5874 38.2874 36.1262 38.7634 34.58C36.3146 33.5443 34.6793 31.0799 34.6764 28.4211Z" fill="white" />
@@ -318,7 +318,7 @@ export const AppStoreIconOld = () => (
 )
 
 export const PlayStoreIconOld = () => (
-    <svg width="189" height="56" viewBox="0 0 189 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="140" height="56" viewBox="0 0 189 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="0.65" y="0.65" width="187.7" height="54.7" rx="11.35" fill="#024E44" />
         <rect x="0.65" y="0.65" width="187.7" height="54.7" rx="11.35" stroke="#999999" strokeWidth="1.3" />
         <g filter="url(#filter0_ii_354_4909)">
