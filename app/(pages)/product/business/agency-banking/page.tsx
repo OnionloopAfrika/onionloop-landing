@@ -4,9 +4,9 @@ import { FeatureSection } from "@/app/components/sections/Produts";
 const page = () => {
 
     const businessQRHero = {
-    title: "QR Payments",
-    description: "Accept payments instantly with Onionloop QR—no cash, no terminals, and no bank details shared. Use static or dynamic QR codes, with every payment confirmed before funds are sent.",
-    imageSrc: "/extrasImage.png",
+    title: "Agency Banking",
+    description: "Accept payments instantly with Onionloop QR codes. No cash, no terminals, and no bank details shared. Use QR codes that cannot change or can be updated, and check each payment before money is sent.",
+    imageSrc: "/agency-banking.png",
     imageAlt: "Business owner accepting payment on phone"
 };
 
