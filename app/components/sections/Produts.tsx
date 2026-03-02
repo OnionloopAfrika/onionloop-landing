@@ -1,7 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react"
-import AOS from "aos"
+import React from "react"
 import "aos/dist/aos.css"
 
 interface FeatureCardItem {
@@ -60,23 +59,16 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
   heroData,
   gridData,
 }) => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out-cubic",
-      offset: 80,
-    })
-  }, [])
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24 font-sans text-gray-900">
+    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24 font-sans text-gray-900" >
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-32">
         
         <div
           data-aos="fade-right"
           className="w-full md:w-1/2 space-y-4"
+          style={{overflow: "clip"}}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-(--primary-light) tracking-tight">
             {heroData.title}
@@ -88,9 +80,10 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
         </div>
 
         <div
-          data-aos="fade-left"
+          data-aos="fade-down"
           data-aos-delay="100"
           className="w-full md:w-1/2 flex justify-center relative"
+          style={{overflow: "clip"}}
         >
           <div className="absolute inset-0 bg-lime-100 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
           
@@ -109,6 +102,7 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
         <div
           data-aos="fade-up"
           className="text-center max-w-2xl mb-16 space-y-2"
+          style={{overflow: "clip"}}
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             {gridData.title}
