@@ -5,35 +5,42 @@ import Image from "next/image"
 import "aos/dist/aos.css"
 import { useMode } from "@/app/context/ModeContext"
 import { Star } from "../icons/svgs"
+import Link from "next/link"
 
 const Main = () => {
     const personal = [
-        {
+        {   
+            id: "qr-payments",
             title: "QR Payments",
             description: "Receive money, send money, see your balance and withdraw money at any time.",
             image: "/qr-payments.png",
         },
-        {
+        {   
+            id: "payment-confirmation",
             title: "Cash Services",
             description: "Use a QR code to deposit or withdraw cash with verified Onionloop agents. Your balance updates immediately, and your money and information stay protected.",
             image: "/cash-services.png",
         },
-        {
+        {   
+            id: "personal-wallet",
             title: "Personal Wallet",
             description: "Receive money, make payments, check your balance and withdraw your money at any time.",
             image: "/personal-wallet-f.png",
         },
         {
+            id: "money-transfer",
             title: "Bank Transfers",
             description: "Move money inside Onionloop or send it to your connected bank account. Each transfer shows if it's pending, completed, or failed.",
             image: "/bank-transfers.png",
         },
-        {
+        {   
+            id: "rewards",
             title: "Earn Onioncoins",
             description: "Get coins as rewards when you send or receive money. They are tracked separately from your wallet balance.",
             image: "/onioncoins.png",
         },
-        {
+        {   
+            id: "in-app-messaging",
             title: "In-app messaging",
             description: "Message Onionloop users about money you send or receive. Each chat is linked to the transaction so you can see it easily.",
             image: "/messaging.png",
@@ -41,32 +48,38 @@ const Main = () => {
     ]
 
     const business = [
-        {
+        {   
+             id: "business-wallet",
             title: "Business Wallet",
             description: "Receive customer payments in your business wallet, check balance, and monitor how money moves in and out.",
             image: "/business-wallet.png",
         },
         {
+            id: "payment-review",
             title: "Payment Review",
             description: "Customers check their payment details before sending money, so it doesn't go to the wrong account.",
             image: "/payment-review.png",
         },
         {
+            id: "agency-banking",
             title: "Agency Banking",
             description: "Offer customers the ability to deposit or withdraw cash through verified Onionloop agents, with each transaction clearly recorded in the system.",
             image: "/agency-banking.png",
         },
         {
+            id: "payment-resolution",
             title: "Payment Resolution",
             description: "Customers can report problems before a payment is completed, so any issues can be fixed quickly.",
             image: "/payment-resolution.png",
         },
-        {
+        {   
+            id: "business-management",
             title: "Business Management",
             description: "Manage your inventory, add staff, assign roles, and control how payments are handled business across your business account.",
             image: "/business-management.png",
         },
-        {
+        {   
+            id: "withdrawals",
             title: "Withdrawals",
             description: "Transfer money from your business wallet to your connected bank account. Balance updates after every withdrawal.",
             image: "/withdrawals.png",
@@ -116,7 +129,7 @@ const Main = () => {
                             </p>
                         </div>
 
-                        <button className="absolute bottom-8 left-8 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
+                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-8 left-8 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
                             Learn more
                             <svg
                                 width="16"
@@ -130,7 +143,7 @@ const Main = () => {
                             >
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
-                        </button>
+                        </Link>
 
                         <div className="absolute bottom-0 right-0 w-[60%] h-[70%] pointer-events-none">
                             <Image

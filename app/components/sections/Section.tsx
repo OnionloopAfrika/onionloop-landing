@@ -163,7 +163,7 @@ const Section = () => {
                         <h1
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="text-lg max-w-3xl font-normal text-justify text-(--text-secondary)"
+                            className="text-lg max-w-3xl font-normal text-justify text-(--text-main)"
                         >
                             Onionloop Agents provide cash deposit or withdrawal service for customers. As an agent, you help customers move money between cash and their onionloop wallet, verify transaction using QR codes, and support customers when clarification is needed after a transaction
                         </h1>
