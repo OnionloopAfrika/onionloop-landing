@@ -169,7 +169,7 @@ const Section = () => {
                         </h1>
                     </header>
 
-                    <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
+                    <div style={{overflow: "clip"}} className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
                         <div className="w-full max-w-150 space-y-6">
                             {agentData.map((a, index) => (
                                 <div
@@ -194,7 +194,8 @@ const Section = () => {
                         </div>
 
                         <div
-                            data-aos="fade-left"
+                            data-aos="fade-down"
+                            style={{overflow: "clip"}}
                             className="w-full max-w-md aspect-square rounded-3xl overflow-hidden shrink-0 relative shadow-xl"
                         >
                             <Image

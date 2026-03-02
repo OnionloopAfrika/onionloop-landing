@@ -131,7 +131,7 @@ export default function Services() {
                 <div className="w-full mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 rounded-2xl border border-gray-100">
 
-                        <div data-aos="fade-right" className="flex flex-col md:flex-row bg-[#F9FFE5] p-6 gap-6 rounded-2xl lg:rounded-r-none">
+                        <div data-aos="fade-down" style={{overflow: "clip"}} className="flex flex-col md:flex-row bg-[#F9FFE5] p-6 gap-6 rounded-2xl lg:rounded-r-none">
                             <div className="relative w-full max-w-85 h-75 rounded-2xl overflow-hidden shrink-0 mx-auto">
                                 <Image
                                     src={data.tiers[activeTier].image}
@@ -169,7 +169,7 @@ export default function Services() {
                             </div>
                         </div>
 
-                        <div data-aos="fade-left" className="bg-white p-6 rounded-2xl lg:rounded-l-none">
+                        <div  style={{overflow: "clip"}} className="bg-white p-6 rounded-2xl lg:rounded-l-none">
                             <h3 className="text-xl mb-4 font-medium text-black">How it works day-to-day</h3>
                             <hr className="my-4 border-gray-200" />
 
@@ -194,7 +194,7 @@ export default function Services() {
                     </div>
 
                     <div data-aos="zoom-in" data-aos-delay="200" className="flex justify-center mt-8">
-                        <button className="bg-[#004D40] text-white px-8 py-3.5 rounded-xl font-semibold text-sm md:text-base hover:bg-[#003d33] transition-colors">
+                        <button className="bg-[#004D40] text-white px-8 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-[#003d33] transition-colors">
                             {data.tiers[activeTier].buttonText}
                         </button>
                     </div>
