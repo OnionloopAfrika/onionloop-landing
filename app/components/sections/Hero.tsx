@@ -35,7 +35,7 @@ export default function Hero() {
                             <div
                                 data-aos="fade-up"
                                 data-aos-delay="300"
-                                className="flex flex-row sm:flex-col gap-4 pt-4 items-center justify-center md:justify-start"
+                                className="flex gap-2 pt-4 items-center justify-center md:justify-start"
                             >
                                 <a aria-label="App store icon" href="#">
                                     <AppStoreIconOld />
