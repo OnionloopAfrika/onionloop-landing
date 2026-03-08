@@ -2,6 +2,7 @@
 
 import { JSX, useState, useEffect } from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { GlobeIcon, QrIcon, Star, BankIcon, WalletFill, PeopleIcon, WarningIcon, ChartsView, ScanIconFill } from "../icons/svgs"
@@ -91,7 +92,7 @@ const iconMap: Record<string, JSX.Element> = {
 
 export default function Services() {
     const [activeTier, setActiveTier] = useState(0)
-
+    const router = useRouter()
     useEffect(() => {
         AOS.init({
             duration: 800,
@@ -194,7 +195,7 @@ export default function Services() {
                     </div>
 
                     <div data-aos="zoom-in" data-aos-delay="200" className="flex justify-center mt-8">
-                        <button className="bg-[#004D40] text-white px-8 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-[#003d33] transition-colors">
+                        <button className="bg-[#004D40] text-white px-8 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-[#003d33] transition-colors" onClick={() => router.push("/onboarding")}>
                             {data.tiers[activeTier].buttonText}
                         </button>
                     </div>
