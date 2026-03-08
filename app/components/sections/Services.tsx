@@ -102,14 +102,14 @@ export default function Services() {
     }, [])
 
     return (
-        <div className="w-full min-h-screen bg-white pb-16">
-            <div className="w-full max-w-300 mx-auto px-4">
+        <div className="w-full min-h-screen bg-white pb-16" id="merchants">
+            <div className="w-full max-w-7xl mx-auto px-4">
 
                 <header data-aos="fade-up" className="w-full flex flex-col items-center justify-center pt-8 md:pt-12">
                     <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-5 py-2.5 rounded-full mb-6 font-medium text-sm md:text-base">
                         <Star /> {data.header.badge.text}
                     </div>
-                    <h1 className="text-2xl md:text-4xl lg:text-[40px] max-w-250 font-bold text-center mb-8 md:mb-12 px-4 leading-tight">
+                    <h1 className="text-2xl md:text-4xl lg:text-[40px] w-full font-bold text-center mb-8 md:mb-12 px-4 leading-tight">
                         {data.header.title}
                     </h1>
                 </header>

@@ -11,21 +11,21 @@ const TrustSection = () => {
     const personalPoints = [
         "QR codes won't show your account balance or private information to receiver.",
         "You see who's getting the money before you send it.",
-        "You need your PIN or fingerprint to approve payments.",
+        "You need your PIN or biometrics to approve payments.",
         "Confirm your personal details and enjoy more benefits."
     ]
 
     const businessPoints = [
         "QR codes won't show your account balance or private details to your customers.",
         "Your customers see your business name and details before sending money.",
-        "You need your PIN or fingerprint to approve transactions.",
+        "You need your PIN or biometrics to approve transactions.",
         "Verify your business details and enjoy more benefits"
     ]
 
     const points = mode === "personal" ? personalPoints : businessPoints
 
     return (
-        <section className="w-full max-w-5xl mx-auto py-16 px-6">
+        <section className="w-full max-w-7xl mx-auto py-16 px-6">
             
             <div className="flex flex-col items-start gap-2 mb-10">
                 <h2
