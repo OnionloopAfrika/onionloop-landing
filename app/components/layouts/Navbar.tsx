@@ -6,11 +6,13 @@ import ProductDropdown from "./ProductDropdown"
 import { OnionLoop } from "../icons/svgs"
 import Link from "next/link"
 import { useMode } from "@/app/context/ModeContext"
+import { useRouter } from "next/navigation"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { mode } = useMode()
   const navRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -54,7 +56,7 @@ export default function Navbar() {
                 Download app
               </button>
             ) : (
-              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors" onClick={() => router.push("/onboarding")}>
                 Create your account
               </button>
             )}
@@ -101,7 +103,7 @@ export default function Navbar() {
                 Download app
               </button>
             ) : (
-              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors" onClick={() => router.push("/onboarding")}>
                 Create your account
               </button>
             )}

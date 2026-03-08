@@ -1,6 +1,7 @@
 "use client"
 
 import { useMode } from "@/app/context/ModeContext"
+import { useRouter } from "next/navigation"
 import "aos/dist/aos.css"
 import {
     CloseEye,
@@ -87,6 +88,7 @@ const Section = () => {
 
     const { mode } = useMode()
     const data = mode === "personal" ? personal : business
+    const router = useRouter()
 
     return (
         <div className="w-full max-w-7xl mx-auto">
@@ -144,7 +146,7 @@ const Section = () => {
                         Download App
                     </Link>
                 ) : (
-                    <button className="bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg">
+                    <button className="bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg" onClick={() => router.push("/onboarding")}>
                         Open Your Business Account
                     </button>
                 )}
@@ -211,7 +213,7 @@ const Section = () => {
                         data-aos="zoom-in"
                         className="mt-12 w-full flex items-center justify-center pb-10"
                     >
-                        <button className="bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg">
+                        <button className="bg-(--primary) text-white px-8 py-4 rounded-xl font-medium hover:bg-(--primary)/80 transition-colors shadow-lg" onClick={() => router.push("/onboarding")}>
                             Become an Onionloop agent
                         </button>
                     </div>
