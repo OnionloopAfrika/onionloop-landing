@@ -7,8 +7,6 @@ import {
   Poppins
 } from "next/font/google";
 import { ModeProvider } from "./context/ModeContext";
-import Navbar from "./components/layouts/Navbar";
-import Footer from "./components/layouts/Footer";
 import AOSProvider from "./context/AOSProvider";
 import Shell from "./shell";
 const inter = Inter({

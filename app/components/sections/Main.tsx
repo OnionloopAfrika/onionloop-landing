@@ -4,52 +4,52 @@ import { useEffect } from "react"
 import Image from "next/image"
 import "aos/dist/aos.css"
 import { useMode } from "@/app/context/ModeContext"
-import { Star } from "../icons/svgs"
+import { CautionIconFill, OpenEyeIcon, Star, WarningIcon } from "../icons/svgs"
 import Link from "next/link"
 
 const Main = () => {
     const personal = [
-        {   
+        {
             id: "qr-payments",
             title: "QR Payments",
-            description: "Receive money, send money, see your balance and withdraw money at any time.",
+            description: "Scan and share your QR code to make fast, secure payments, while keeping track of your balance as it updates.",
             image: "/qr-payments.png",
         },
-        {   
+        {
             id: "payment-confirmation",
             title: "Cash Services",
-            description: "Use a QR code to deposit or withdraw cash with verified Onionloop agents. Your balance updates immediately, and your money and information stay protected.",
+            description: "Deposit or withdraw cash through verified Onionloop agents. Your balance updates instantly, with every transaction securely protected.",
             image: "/cash-services.png",
         },
-        {   
+        {
             id: "personal-wallet",
             title: "Personal Wallet",
-            description: "Receive money, make payments, check your balance and withdraw your money at any time.",
+            description: "Receive payments, make transfers, and check wallet balance. Withdraw your money whenever, with full control over your funds.",
             image: "/personal-wallet-f.png",
         },
         {
             id: "money-transfer",
             title: "Bank Transfers",
-            description: "Move money inside Onionloop or send it to your connected bank account. Each transfer shows if it's pending, completed, or failed.",
+            description: "Move money inside Onionloop or withdraw it to your linked bank account. Each transfer shows if it’s pending, completed, or failed.",
             image: "/bank-transfers.png",
         },
-        {   
+        {
             id: "rewards",
             title: "Earn Onioncoins",
-            description: "Get coins as rewards when you send or receive money. They are tracked separately from your wallet balance.",
+            description: "Get Onioncoins as rewards when you send or receive money. They are tracked separately from your wallet balance.",
             image: "/onioncoins.png",
         },
-        {   
+        {
             id: "in-app-messaging",
             title: "In-app messaging",
-            description: "Message Onionloop users about money you send or receive. Each chat is linked to the transaction so you can see it easily.",
+            description: "Message your friends anytime. Payments made within a chat are automatically connected, so everything stays organized.",
             image: "/messaging.png",
         }
     ]
 
     const business = [
-        {   
-             id: "business-wallet",
+        {
+            id: "business-wallet",
             title: "Business Wallet",
             description: "Receive customer payments in your business wallet, check balance, and monitor how money moves in and out.",
             image: "/business-wallet.png",
@@ -57,7 +57,7 @@ const Main = () => {
         {
             id: "payment-review",
             title: "Payment Review",
-            description: "Customers check their payment details before sending money, so it doesn't go to the wrong account.",
+            description: "Customers review your payment details before completing a transfer, helping ensure funds are sent to the correct account.",
             image: "/payment-review.png",
         },
         {
@@ -69,19 +69,19 @@ const Main = () => {
         {
             id: "payment-resolution",
             title: "Payment Resolution",
-            description: "Customers can report problems before a payment is completed, so any issues can be fixed quickly.",
+            description: "Customers can flag any concerns before a payment is finalized, allowing potential issues to be identified and resolved quickly.",
             image: "/payment-resolution.png",
         },
-        {   
+        {
             id: "business-management",
             title: "Business Management",
-            description: "Manage your inventory, add staff, assign roles, and control how payments are handled business across your business account.",
+            description: "Manage your inventory, add staff, assign roles, and control how payments are handled across your business account. ",
             image: "/business-management.png",
         },
-        {   
+        {
             id: "withdrawals",
             title: "Withdrawals",
-            description: "Transfer money from your business wallet to your connected bank account. Balance updates after every withdrawal.",
+            description: "Move funds from your business wallet to your linked bank account anytime. Your balance updates after each withdrawal accurately.",
             image: "/withdrawals.png",
         }
     ]
@@ -89,14 +89,32 @@ const Main = () => {
     const { mode } = useMode()
     const data = mode === "personal" ? personal : business
 
-
     return (
         <main className="w-full max-w-7xl mx-auto mt-4 md:mt-8 pb-20">
-            
+            {mode === "business" && (
+                <>
+                    <header className="w-full flex flex-col items-center justify-center">
+                        <div
+                            data-aos="fade-up"
+                            className="bg-[#E6F4D7] text-[#024E44] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full mt-10 mb-6 text-sm font-medium"
+                        >
+                            <Star /> Business Struggles
+                        </div>
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                            className="text-3xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
+                        >
+                            Running a business in Nigeria means dealing with these daily.
+                        </h1>
+                    </header>
+                    <FeatureCards />
+                </>
+            )}
             <header className="w-full flex flex-col items-center justify-center">
                 <div
                     data-aos="fade-up"
-                    className="bg-[#E6F4D7] text-[#4F7C1B] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full mt-10 mb-6 text-sm font-medium"
+                    className="bg-[#E6F4D7] text-[#024E44] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full mt-10 mb-6 text-sm font-medium"
                 >
                     <Star /> {mode === "personal" ? "More than just sending money" : "Core actions"}
                 </div>
@@ -104,7 +122,7 @@ const Main = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    className="text-3xl md:text-4xl max-w-3xl font-bold text-center px-4 leading-tight text-(--text-main)"
+                    className="text-3xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
                 >
                     {mode === "personal"
                         ? "Onionloop lets you make payments, receive money, and keep track of your transactions"
@@ -112,7 +130,7 @@ const Main = () => {
                 </h1>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mx-auto px-4">
                 {data.map((item, index) => (
                     <div
                         key={item.title}
@@ -124,12 +142,12 @@ const Main = () => {
                             <h2 className="text-[22px] font-bold text-(--primary-light) mb-3">
                                 {item.title}
                             </h2>
-                            <p className="text-[#4D4D4D] text-[15px] leading-relaxed">
+                            <p className="text-[#4D4D4D] text-[15px]">
                                 {item.description}
                             </p>
                         </div>
 
-                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-8 left-8 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
+                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-4 left-8 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
                             Learn more
                             <svg
                                 width="16"
@@ -145,12 +163,12 @@ const Main = () => {
                             </svg>
                         </Link>
 
-                        <div className="absolute bottom-0 right-0 w-[60%] h-[70%] pointer-events-none">
+                        <div className="absolute -bottom-6 -right-6 w-72 h-72 pointer-events-none">
                             <Image
                                 src={item.image}
                                 alt={item.title}
                                 fill
-                                className="object-contain object-bottom-right"
+                                className="object-contain"
                                 priority
                             />
                         </div>
@@ -162,3 +180,49 @@ const Main = () => {
 }
 
 export default Main
+
+const cards = [
+    {
+        id: 1,
+        icon: <WarningIcon />,
+        title: "Fake Payment Alerts",
+        description: "A customer sends a screenshot. You release the goods. The money never arrives. It happens to thousands of Nigerian merchants every week."
+    },
+    {
+        id: 2,
+        icon: <OpenEyeIcon />,
+        title: "No Visibility On Payments",
+        description: "Which transaction came in? When? From who? Without a clear payment dashboard, reconciling your business cash is a daily headache."
+    },
+    {
+        id: 3,
+        icon: <CautionIconFill />,
+        title: "POS Downtime Kills Sales",
+        description: "Network down. Card declined. Customer leaves. Every POS failure is a sale you never made and a customer who might not come back."
+    }
+];
+
+function FeatureCards() {
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 bg-white">
+            {cards.map((card) => (
+                <div
+                    key={card.id}
+                    className="bg-[#F7F7F7] rounded-2xl p-6 flex flex-col items-start"
+                >
+                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 p-2.5">{card.icon}
+                    </div>
+
+                    <div className="flex flex-col gap-4">
+                        <h3 className="text-(--primary-light) text-[22px] font-bold leading-tight">
+                            {card.title}
+                        </h3>
+                        <p className="text-[#4D4D4D] text-[15px]">
+                            {card.description}
+                        </p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}

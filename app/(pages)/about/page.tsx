@@ -59,14 +59,12 @@ const page = () => {
             <div className="w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-4 grid px-4 md:px-6 mt-10 mb-20 justify-center items-center">
                 {/* grid 1 */}
                 <div className="w-full max-w-110 h-full mx-auto" data-aos="fade-right">
-                    <h1 className="text-left font-bold text-4xl text-(--text-main)">We started with
-                        a simple question.</h1>
+                    <h1 className="text-left font-bold text-4xl text-(--text-main)">We Started With A simple Question</h1>
                     <p className="text-sm text-(--text-main) text-justify mt-4">Why should sending money be harder than sending a message?</p>
                     <p className="text-sm text-(--text-main) text-justify">
                         Why share account numbers or phone details just to get paid?
                     </p>
-                    <p className="text-sm text-(--text-main) text-justify mt-4">
-                        Onionloop was built to make everyday payments simple. We bridge the gap between complex banking systems and how people and businesses actually move money using QR payments and secure wallets to make transactions clear, easy, and rewarding.</p>
+                    <p className="text-sm text-(--text-main) text-justify mt-4">Onionloop was built to make everyday payments simple. We bridge the gap between complex banking systems and how people and businesses actually move money using QR payments and secure wallets to make transactions clear, easy, and rewarding.</p>
                 </div>
                 {/* grid 2 */}
                 <div className="w-full max-w-110 h-80 relative mt-8 md:mt-0" data-aos="fade-left">
@@ -87,8 +85,8 @@ const page = () => {
                         Our Mission
                     </span>
                     <h1 className="text-left font-bold text-4xl text-(--text-main) mt-4">Make Payments as simple as having a conversation</h1>
-                    <p className="text-sm text-(--text-main) text-justify mt-4">We’re building payment tools that remove barriers between people and their money — no account numbers to remember, no sensitive details to share, and no unnecessary delays.</p>
-                    <p className="text-sm text-(--text-main) text-justify mt-4">Everyone in Africa should be able to send money, pay locally, and run a business with tools that are secure, reliable, and rewarding. That’s what we’re building.</p>
+                    <p className="text-sm text-(--text-main) text-justify mt-4">We’re building payment tools that eliminate the usual barriers to moving money, no account numbers to remember, no sensitive details to share, and no unnecessary delays.</p>
+                    <p className="text-sm text-(--text-main) text-justify mt-4">We believe everyone in Africa should be able to send money, pay locally, and run their business smoothly. Payments should be simple, secure, and rewarding.</p>
                 </div>
                 <div className="w-full max-w-110 h-full mx-auto bg-[#F2F2F2] rounded-2xl mt-8 md:mt-0" data-aos="zoom-in">
                     <div className="p-6 flex items-start justify-center gap-2">
@@ -127,9 +125,7 @@ const page = () => {
                         🌍
                     </div>
                     <h2 className="text-2xl font-semibold text-(--text-main)">The Future we&apos;re building</h2>
-                    <p className="text-(--text-main) text-sm">A future where every African can participate fully
-                        in the digital economy, where payments are instant and rewarding, and where financial
-                        inclusion isn’t just a goal, it’s reality.</p>
+                    <p className="text-(--text-main) text-sm">A future where every African can participate fully in the digital economy, where payments are fast, rewarding, and where everyone has access to financial services not just as a goal, but as reality. We look forward to: </p>
                     <ul className="list-none text-(--text-main) space-y-1">
                         {["100 million users across Africa by 2030", "Every business, big or small, accepting QR payments.", "Financial tools that empower, not complicate."].map((tag) => (
                             <li key={tag} className="flex items-center justify-start gap-2 text-sm"><TickIcon /> {tag}</li>
@@ -146,8 +142,8 @@ const page = () => {
                         Our Vision
                     </span>
                     <h1 className="text-left font-bold text-4xl text-(--text-main) mt-4">Become Africa&apos;s most <br /> <span className="text-[#04907E]">trusted payment platform</span></h1>
-                    <p className="text-sm text-(--text-main) text-justify mt-4">We envision an Africa where anyone can send money, pay for goods, and run businesses without the friction of traditional banking. A place where trust comes from transparency, and every transaction gives value back to the community</p>
-                    <p className="text-sm text-(--text-main) text-justify mt-4">This is more than payments. It’s about making everyday transactions simple and rewarding, so people can focus on growing their businesses, supporting their families, and building their future.</p>
+                    <p className="text-sm text-(--text-main) text-justify mt-4">We imagine an Africa where anyone can send money, make payments, and run a business without traditional banking barriers built on transparency, trust, and rewarding transactions.</p>
+                    <p className="text-sm text-(--text-main) text-justify mt-4">Our goal is to make everyday payments simple and beneficial, empowering people to grow their businesses and support their communities.</p>
                 </div>
             </div>
         </div>

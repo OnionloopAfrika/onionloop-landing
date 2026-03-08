@@ -20,22 +20,22 @@ const Section = () => {
         {
             icon: <CloseEye />,
             title: "Less information shared ",
-            description: "You don’t need to give out bank details or phone number to send or receive money."
+            description: "No need for your bank details or phone number to send or receive money."
         },
         {
             icon: <GuardIcon />,
             title: "Fewer wrong transfers",
-            description: " You see the recipient’s username and avatar before confirming any payment."
+            description: "You see the receiver’s name and avatar before sending money."
         },
         {
             icon: <OpenEyeIcon />,
             title: "Clear payment control",
-            description: " Nothing happens until you review the details and approve the transaction yourself."
+            description: "Nothing happens until you check the details and approve the payment."
         },
         {
             icon: <SlashedEye />,
-            title: "Reliable outcomes",
-            description: "Each transaction shows a clear status, so you always know what happened."
+            title: "Clear Transaction Results",
+            description: "You can see which payments went through and which didn’t."
         },
     ]
 
@@ -43,22 +43,22 @@ const Section = () => {
         {
             icon: <TickCircle />,
             title: "Correct payment ",
-            description: "Customers confirm payment details before paying, reducing wrong or unintended transactions."
+            description: "Customers confirm payment details before sending to prevent mistakes."
         },
         {
             icon: <WarningIcon />,
-            title: "Issues handled early ",
-            description: "Customers can object to a transaction before payment is completed, preventing post-payment disputes."
+            title: "Fix Problems Quickly",
+            description: "Customers can stop a wrong payment before money is sent."
         },
         {
             icon: <OpenEyeIcon />,
-            title: "Clear transaction visibility ",
-            description: "Nothing happens until you review the details and approve the transaction yourself."
+            title: "Clear Payment Control",
+            description: " Payments only go through after you check and approve them."
         },
         {
             icon: <CloseEye />,
-            title: "Reliable outcome ",
-            description: "Businesses can view completed, pending, and failed transactions in their records."
+            title: "Clear Transaction Status",
+            description: "See immediately if each transaction is completed or not."
         },
     ]
 
@@ -89,7 +89,7 @@ const Section = () => {
     const data = mode === "personal" ? personal : business
 
     return (
-        <div className="w-full max-w-7xl mx-auto pb-20">
+        <div className="w-full max-w-7xl mx-auto">
             <header className="w-full flex flex-col items-center justify-center">
                 <div
                     data-aos="fade-up"
@@ -115,7 +115,7 @@ const Section = () => {
                         key={index}
                         data-aos="fade-up"
                         data-aos-delay={index * 120}
-                        className="bg-[#F2F2F2] rounded-3xl p-6 flex items-start justify-center gap-2"
+                        className="bg-[#F7F7F7] rounded-3xl p-6 flex items-start justify-center gap-2"
                     >
                         <div className="flex items-center justify-center w-10 h-10 bg-white rounded-xl mb-4 p-2 shrink-0">
                             {item.icon}
@@ -151,11 +151,11 @@ const Section = () => {
             </div>
 
             {mode === "business" && (
-                <div className="w-full max-w-7xl mx-auto mt-20 p-4 border-t border-gray-100">
+                <div className="w-full max-w-7xl mx-auto mt-20 p-4 border-t border-gray-100" id="agents">
                     <header className="w-full">
                         <div
                             data-aos="fade-up"
-                            className="bg-[#CCEA6F80] text-(--primary) inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full mb-6 font-normal"
+                            className="bg-[#CCEA6F80] text-(--primary) inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full mb-6 font-medium"
                         >
                             <Star /> Become an Onionloop agent
                         </div>
@@ -169,7 +169,7 @@ const Section = () => {
                         </h1>
                     </header>
 
-                    <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
+                    <div style={{overflow: "clip"}} className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
                         <div className="w-full max-w-150 space-y-6">
                             {agentData.map((a, index) => (
                                 <div
@@ -182,7 +182,7 @@ const Section = () => {
                                         <TickIcon />
                                     </span>
                                     <div className="w-full flex flex-col items-start justify-start">
-                                        <h1 className="text-base font-bold text-(--text-secondary)">
+                                        <h1 className="text-base font-bold text-(--text-main)">
                                             {a.title}
                                         </h1>
                                         <h2 className="text-base font-normal text-(--text-tertiary)">
@@ -194,7 +194,8 @@ const Section = () => {
                         </div>
 
                         <div
-                            data-aos="fade-left"
+                            data-aos="fade-down"
+                            style={{overflow: "clip"}}
                             className="w-full max-w-md aspect-square rounded-3xl overflow-hidden shrink-0 relative shadow-xl"
                         >
                             <Image

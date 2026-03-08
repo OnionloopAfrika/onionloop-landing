@@ -4,7 +4,7 @@ import { useMode } from "../../context/ModeContext";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import "aos/dist/aos.css";
-import { AppStoreIconOld, ArrowLeft, PlayStoreIconOld, ScanIcon } from "../icons/svgs";
+import { AppleStoreIcon, AppStoreIconOld, ArrowLeft, GooglePlayBlackIcon, HeroBackground, PlayStoreIconOld, ScanIcon } from "../icons/svgs";
 
 export default function Hero() {
     const { mode } = useMode();
@@ -16,7 +16,7 @@ export default function Hero() {
             >
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-                        
+
                         <div className="space-y-4 z-10 text-center md:text-left">
                             <div data-aos="fade-up">
                                 <h1 className="text-4xl md:text-5xl font-bold leading-tight font-poppins text-(--primary-light)">
@@ -70,9 +70,14 @@ export default function Hero() {
         <section
             className="w-full py-16 md:py-24 px-4 md:px-6 bg-(--primary) min-h-[70dvh] overflow-hidden"
         >
-            <div className="max-w-7xl mx-auto">
+            <div className="w-full bg-(--primary) absolute top-0 bottom-0 right-0 h-175 -z-1"></div>
+
+            <div className="max-w-7xl mx-auto relative">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+                    <HeroBackground />
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    
+
                     <div className="space-y-4 text-center md:text-left">
                         <div data-aos="fade-right" className="flex items-center justify-center md:justify-start gap-2 text-gray-800 py-2 rounded-full text-sm font-semibold">
                             <ScanIcon />
@@ -95,19 +100,17 @@ export default function Hero() {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="300"
-                            className="pt-4 flex items-center justify-center lg:justify-start"
+                            className="flex gap-2 pt-4 items-center justify-center md:justify-start"
                         >
-                            <a
-                                href="#"
-                                className="inline-flex justify-center gap-2 items-center text-(--primary) bg-[#FFFFFF] font-semibold hover:text-lime-400 transition-colors group p-3 rounded-xl"
-                            >
-                                Open Your Business Account
-                                <ArrowLeft />
+                            <a aria-label="App store icon" href="#">
+                                <AppleStoreIcon />
+                            </a>
+                            <a aria-label="Play store icon" href="#">
+                                <GooglePlayBlackIcon />
                             </a>
                         </div>
                     </div>
 
-                    <div className="w-full bg-(--primary) absolute top-0 bottom-0 right-0 h-175 -z-1"></div>
 
                     <div
                         data-aos="fade-left"
