@@ -103,7 +103,7 @@ const Main = () => {
                         <h1
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="text-3xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
+                            className="text-2xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
                         >
                             Running a business in Nigeria means dealing with these daily.
                         </h1>
@@ -122,7 +122,7 @@ const Main = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    className="text-3xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
+                    className="text-2xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
                 >
                     {mode === "personal"
                         ? "Onionloop lets you make payments, receive money, and keep track of your transactions"
