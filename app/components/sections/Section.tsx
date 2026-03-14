@@ -126,7 +126,7 @@ const Section = () => {
                             <h3 className="text-2xl font-semibold mb-2 text-(--text-secondary)">
                                 {item.title}
                             </h3>
-                            <p className="text-(--text-tertiary) text-sm">
+                            <p className="text-(--text-tertiary) text-base">
                                 {item.description}
                             </p>
                         </div>
@@ -171,7 +171,7 @@ const Section = () => {
                         </h1>
                     </header>
 
-                    <div style={{overflow: "clip"}} className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
+                    <div style={{ overflow: "clip" }} className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
                         <div className="w-full max-w-150 space-y-6">
                             {agentData.map((a, index) => (
                                 <div
@@ -197,7 +197,7 @@ const Section = () => {
 
                         <div
                             data-aos="fade-down"
-                            style={{overflow: "clip"}}
+                            style={{ overflow: "clip" }}
                             className="w-full max-w-md aspect-square rounded-3xl overflow-hidden shrink-0 relative shadow-xl"
                         >
                             <Image

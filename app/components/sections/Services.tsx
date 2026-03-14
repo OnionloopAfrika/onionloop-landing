@@ -121,7 +121,7 @@ export default function Services() {
                             <button
                                 key={tier.id}
                                 onClick={() => setActiveTier(index)}
-                                className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-colors ${activeTier === index ? 'bg-white text-(--primary) font-bold' : 'text-[#98A2B3] hover:text-(--primary)'}`}
+                                className={`md:px-4 md:py-2 p-2 rounded-full text-sm md:text-base font-medium transition-colors ${activeTier === index ? 'bg-white text-(--primary) font-bold' : 'text-[#98A2B3] hover:text-(--primary)'}`}
                             >
                                 {tier.name}
                             </button>
@@ -132,7 +132,7 @@ export default function Services() {
                 <div className="w-full mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 rounded-2xl border border-gray-100">
 
-                        <div data-aos="fade-down" style={{overflow: "clip"}} className="flex flex-col md:flex-row bg-[#F9FFE5] p-6 gap-6 rounded-2xl lg:rounded-r-none">
+                        <div data-aos="fade-down" style={{ overflow: "clip" }} className="flex flex-col md:flex-row bg-[#F9FFE5] p-6 gap-6 rounded-2xl lg:rounded-r-none">
                             <div className="relative w-full max-w-85 h-75 rounded-2xl overflow-hidden shrink-0 mx-auto">
                                 <Image
                                     src={data.tiers[activeTier].image}
@@ -170,7 +170,7 @@ export default function Services() {
                             </div>
                         </div>
 
-                        <div  style={{overflow: "clip"}} className="bg-white p-6 rounded-2xl lg:rounded-l-none">
+                        <div style={{ overflow: "clip" }} className="bg-white p-6 rounded-2xl lg:rounded-l-none">
                             <h3 className="text-xl mb-4 font-medium text-black">How it works day-to-day</h3>
                             <hr className="my-4 border-gray-200" />
 
