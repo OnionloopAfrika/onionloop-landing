@@ -136,9 +136,9 @@ const Main = () => {
                         key={item.title}
                         data-aos="fade-up"
                         data-aos-delay={index * 100}
-                        className="bg-white border border-gray-100 rounded-4xl overflow-hidden flex flex-col relative h-112.5 shadow-sm p-8"
+                        className="bg-white border border-gray-100 rounded-4xl overflow-hidden flex flex-col relative h-112.5 shadow-sm p-4 md:p-6"
                     >
-                        <div className="max-w-[70%]">
+                        <div className="max-w-full">
                             <h2 className="text-[22px] font-bold text-(--primary-light) mb-3">
                                 {item.title}
                             </h2>
@@ -147,7 +147,7 @@ const Main = () => {
                             </p>
                         </div>
 
-                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-4 left-8 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
+                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-4 left-4 md:left-6 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
                             Learn more
                             <svg
                                 width="16"

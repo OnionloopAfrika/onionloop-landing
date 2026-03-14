@@ -19,7 +19,7 @@ const page = () => {
         <div className="w-full overflow-hidden">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
-                <div 
+                <div
                     className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center gap-6"
                     data-aos="fade-up"
                 >
@@ -88,7 +88,7 @@ const page = () => {
                     <p className="text-sm text-(--text-main) text-justify mt-4">We’re building payment tools that eliminate the usual barriers to moving money, no account numbers to remember, no sensitive details to share, and no unnecessary delays.</p>
                     <p className="text-sm text-(--text-main) text-justify mt-4">We believe everyone in Africa should be able to send money, pay locally, and run their business smoothly. Payments should be simple, secure, and rewarding.</p>
                 </div>
-                <div className="w-full max-w-110 h-full mx-auto bg-[#F2F2F2] rounded-2xl mt-8 md:mt-0" data-aos="zoom-in">
+                <div className="w-full max-w-110 h-full mx-auto bg-[#F7F7F7] rounded-2xl mt-8 md:mt-0" data-aos="zoom-in">
                     <div className="p-6 flex items-start justify-center gap-2">
                         <div className="flex items-center justify-center w-10 h-10 bg-white rounded-xl mb-4 p-2">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,8 +117,8 @@ const page = () => {
             </div>
 
             <div className="w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-4 grid px-4 md:px-6 mt-10 mb-20 justify-center items-center">
-                <div 
-                    className="rounded-2xl bg-[#F2F2F2] p-6 flex flex-col items-start justify-center gap-2 max-w-110 mx-auto"
+                <div
+                    className="rounded-2xl bg-[#F7F7F7] p-6 flex flex-col items-start justify-center gap-2 max-w-110 mx-auto"
                     data-aos="fade-up"
                 >
                     <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 p-2 text-4xl">
