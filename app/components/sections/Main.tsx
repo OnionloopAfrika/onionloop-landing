@@ -116,7 +116,7 @@ const Main = () => {
                     data-aos="fade-up"
                     className="bg-[#E6F4D7] text-[#024E44] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full mt-10 mb-6 text-sm font-medium"
                 >
-                    <Star /> {mode === "personal" ? "More than just sending money" : "Core actions"}
+                    <Star /> {mode === "personal" ? "More than just sending money" : "Solutions for your Business"}
                 </div>
 
                 <h1
