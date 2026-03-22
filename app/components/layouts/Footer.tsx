@@ -206,12 +206,12 @@ export default function Footer() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:block max-w-7xl mx-auto">
-      <div className="w-80 h-80 md:w-150 md:h-150 absolute md:bottom-10">
-        <OnionSvg />
-      </div>
+      <div className="hidden md:block max-w-7xl mx-auto ">
+        <div className="absolute bottom-10 w-150 h-150 z-0 pointer-events-none">
+          <OnionSvg />
+        </div>
         {/* Top Section */}
-        <div className="flex flex-col justify-between items-start gap-12 pb-8 border-b border-dotted border-gray-300">
+        <div className="relative z-10 flex flex-col justify-between items-start gap-12 pb-8 border-b border-dotted border-gray-300">
           <div className="w-full flex items-center justify-between">
             {/* Newsletter */}
             <div className="max-w-sm">
