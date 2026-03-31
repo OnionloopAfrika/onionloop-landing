@@ -20,7 +20,7 @@ export default function Hero() {
                         <div className="space-y-4 z-10 text-center md:text-left">
                             <div data-aos="fade-up">
                                 <h1 className="text-4xl md:text-5xl font-bold leading-tight font-poppins text-(--primary-light)">
-                                    Avoid Sending <br /> Money To The Wrong <br />Account
+                                    Avoid Sending <br /> Money To The Wrong Account
                                 </h1>
                             </div>
 
