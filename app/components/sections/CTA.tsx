@@ -41,8 +41,8 @@ export default function CTA() {
                     </div>
                 ) : (
                     <div className="px-4">
-                        <Link href={"/onboarding"} className="inline-block bg-[#CCEA6F] text-(--primary) px-8 py-4 rounded-xl font-bold hover:bg-white/80 transition-colors">
-                            Create your account
+                            <Link href={"/onboarding"} className="inline-block bg-[#F7F7F7] text-(--primary) px-8 py-4 rounded-xl font-bold hover:bg-white/80 transition-colors">
+                                Open Your  Business Account
                         </Link>
                     </div>
                 )}

@@ -41,7 +41,7 @@ const Main = () => {
         },
         {
             id: "in-app-messaging",
-            title: "In-app messaging",
+            title: "In-app Messaging",
             description: "Message your friends anytime. Payments made within a chat are automatically connected, so everything stays organized.",
             image: "/messaging.png",
         }
@@ -147,7 +147,7 @@ const Main = () => {
                             </p>
                         </div>
 
-                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-4 left-4 md:left-6 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline">
+                        <Link href={`/product/${mode}/${item.id}`} className="absolute bottom-4 left-4 md:left-6 flex items-center gap-2 text-(--primary-light) text-sm font-semibold hover:underline z-10">
                             Learn more
                             <svg
                                 width="16"
@@ -163,7 +163,7 @@ const Main = () => {
                             </svg>
                         </Link>
 
-                        <div className="absolute -bottom-4 right-0 w-72 h-72 pointer-events-none">
+                        <div className={`${index === 0 && mode === "personal" && "bottom-0"} ${index === 3 && mode ==="business" && "-bottom-10"} absolute -bottom-4 right-0 w-72 h-72 pointer-events-none`}>
                             <Image
                                 src={item.image}
                                 alt={item.title}
