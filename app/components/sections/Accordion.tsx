@@ -43,7 +43,7 @@ const Accordion = () => {
     return (
         <div className="w-full min-h-[85dvh] max-w-7xl mx-auto px-4 relative overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <AccordionBg />
+                {/* <AccordionBg /> */}
             </div>
             <header className="w-full flex flex-col items-center justify-center">
                 <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium">

@@ -36,7 +36,7 @@ const Main = () => {
         {
             id: "rewards",
             title: "Earn Onioncoins",
-            description: "Get Onioncoins as rewards when you send or receive money. They are tracked separately from your wallet balance.",
+            description: "Get Onioncoins as rewards when you send money. They are tracked separately from your wallet balance.",
             image: "/onioncoins.png",
         },
         {
@@ -90,7 +90,7 @@ const Main = () => {
     const data = mode === "personal" ? personal : business
 
     return (
-        <main className="w-full max-w-7xl mx-auto mt-4 md:mt-8 pb-20">
+        <main className="w-full max-w-6xl mx-auto mt-4 md:mt-8 pb-20">
             {mode === "business" && (
                 <>
                     <header className="w-full flex flex-col items-center justify-center">
@@ -136,7 +136,7 @@ const Main = () => {
                         key={item.title}
                         data-aos="fade-up"
                         data-aos-delay={index * 100}
-                        className="bg-white border border-gray-100 rounded-4xl overflow-hidden flex flex-col relative h-112.5 shadow-sm p-4 md:p-6"
+                        className="bg-white border border-gray-100 rounded-4xl overflow-hidden flex flex-col relative h-112.5 shadow-sm pb-0 px-4 pt-4 md:px-6 md:pt-6"
                     >
                         <div className="max-w-full">
                             <h2 className="text-[22px] font-bold text-(--primary-light) mb-3">
@@ -163,12 +163,12 @@ const Main = () => {
                             </svg>
                         </Link>
 
-                        <div className="absolute -bottom-6 -right-6 w-72 h-72 pointer-events-none">
+                        <div className="absolute -bottom-4 right-0 w-72 h-72 pointer-events-none">
                             <Image
                                 src={item.image}
                                 alt={item.title}
                                 fill
-                                className="object-contain"
+                                className="object-contain mask-[radial-gradient(circle,white_75%,transparent_100%)]"
                                 priority
                             />
                         </div>
