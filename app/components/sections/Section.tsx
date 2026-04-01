@@ -4,6 +4,7 @@ import { useMode } from "@/app/context/ModeContext"
 import { useRouter } from "next/navigation"
 import "aos/dist/aos.css"
 import {
+    ChartIcon,
     CloseEye,
     GuardIcon,
     OpenEyeIcon,
@@ -34,7 +35,7 @@ const Section = () => {
             description: "Nothing happens until you check the details and approve the payment."
         },
         {
-            icon: <SlashedEye />,
+            icon: <ChartIcon />,
             title: "Clear Transaction Results",
             description: "You can see which payments went through and which didn’t."
         },
@@ -57,7 +58,7 @@ const Section = () => {
             description: " Payments only go through after you check and approve them."
         },
         {
-            icon: <CloseEye />,
+            icon: <ChartIcon />,
             title: "Clear Transaction Status",
             description: "See immediately if each transaction is completed or not."
         },
