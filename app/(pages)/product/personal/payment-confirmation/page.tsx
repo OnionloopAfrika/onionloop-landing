@@ -5,7 +5,7 @@ const page = () => {
     const cashServicesHero = {
         title: "Cash Services",
         description: "Cash Services lets users deposit and withdraw cash through verified Onionloop Agents using QR-code verification. Transactions are confirmed in-app, protected by PIN authorization, and reflected instantly in the user’s wallet, making cash access simple, secure, and private.",
-        imageSrc: "/cash-services-image.png",
+        imageSrc: "/cash-services.png",
         imageAlt: "Woman smiling while using cash services app"
     };
 

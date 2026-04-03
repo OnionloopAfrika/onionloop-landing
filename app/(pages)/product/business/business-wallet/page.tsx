@@ -6,7 +6,7 @@ const page = () => {
     const businessWalletHero = {
     title: "Business Wallet",
     description: "Your dedicated hub for all business funds. All customer payments land in a separate, secure wallet—never mixed with personal money. View real-time balances, manage up to 3 linked bank accounts, and control who on your team can access funds.",
-    imageSrc: "/extrasImage.png",
+    imageSrc: "/business-wallet.png",
     imageAlt: "Business owner managing funds"
 };
 

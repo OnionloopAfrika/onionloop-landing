@@ -5,7 +5,7 @@ const page = () => {
     const onionCoinsHero = {
         title: "Earn Onioncoins",
         description: "Earn Onioncoin as rewards on every successful transaction. Each payment adds to your rewards balance, can be tracked so you can easily see and redeem what you’ve earned.",
-        imageSrc: "/rewards.png",
+        imageSrc: "/onioncoins.png",
         imageAlt: "Excited man celebrating rewards"
     };
 

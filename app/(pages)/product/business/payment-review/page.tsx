@@ -5,7 +5,7 @@ const page = () => {
     const paymentReviewHero = {
     title: "Payment Review",
     description: "Before a payment is completed, customers clearly see your business name, logo, and the exact amount. This transparency builds trust at checkout, minimizes disputes, and ensures you receive accurate payments every time with Onionloop.",
-    imageSrc: "/extrasImage.png",
+    imageSrc: "/payment-review.png",
     imageAlt: "User reviewing payment details on phone"
 };
 
