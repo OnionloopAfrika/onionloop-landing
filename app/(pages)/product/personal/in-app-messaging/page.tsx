@@ -6,7 +6,7 @@ const page = () => {
     const messagingHero = {
     title: "In-App-Messaging",
     description: "Keep conversations and payments connected. Message your contacts about transactions you’ve sent or received, with chats linked to each payment for easy tracking and clear communication — all within Onionloop.",
-    imageSrc: "/messaging-hero.png",
+    imageSrc: "/messaging.png",
     imageAlt: "Woman using chat feature on phone"
 };
 

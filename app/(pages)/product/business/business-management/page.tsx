@@ -6,7 +6,7 @@ const page = () => {
     const businessManagementHero  = {
     title: "Business Management",
     description: "Run your business smarter, not harder Link products to dynamic QR codes so stock levels update automatically after each sale. Assign roles to staff—super admins control everything, while sub-admins get limited permissions based on their role.",
-    imageSrc: "/extrasImage.png",
+    imageSrc: "/business-management.png",
     imageAlt: "Manager overseeing operations on mobile"
 };
 

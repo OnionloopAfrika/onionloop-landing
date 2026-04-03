@@ -5,7 +5,7 @@ const page = () => {
     const withdrawalsHero = {
     title: "Withdrawals",
     description: "Move money when you need it—safely and clearly Transfer funds from your Business Wallet to any verified bank account with one tap. Track every withdrawal in real time: Processing → Sent → Credited. Your balance updates instantly after settlement.",
-    imageSrc: "/extrasImage.png",
+    imageSrc: "/withdrawals.png",
     imageAlt: "Person withdrawing funds on phone"
 };
 

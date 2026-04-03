@@ -24,7 +24,7 @@ const page = () => {
     const heroData: HeroSectionData = {
         title: "QR Payments",
         description: "Send and receive money instantly with QR codes, track your balance in real time, and make secure payments — all in one trusted platform.",
-        imageSrc: "/QR-payments-image.png",
+        imageSrc: "/qr-payments.png",
         imageAlt: "Man using mobile payment app"
     };
 
