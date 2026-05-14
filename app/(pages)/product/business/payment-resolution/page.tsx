@@ -5,7 +5,7 @@ const page = () => {
     const paymentResolutionHero = {
     title: "Payment Resolution",
     description: "Resolve payment issues instantly in-app. Regenerate QR codes, clarify charges, and communicate directly on each transaction—no missed calls, no messy chats, just fast resolution.",
-    imageSrc: "/extrasImage.png",
+    imageSrc: "/payment-resolution.png",
     imageAlt: "Business owner resolving issue on phone"
 };
 

@@ -5,7 +5,7 @@ const page = () => {
     const bankTransferHero = {
         title: "Bank Transfer",
         description: "Move money within Onionloop or transfer funds to your linked bank account anytime. Every transfer is secure, tracked in real time, and clearly labeled so you always know the status of your money.",
-        imageSrc: "/money-transfer.png",
+        imageSrc: "/bank-transfers.png",
         imageAlt: "Woman holding phone for bank transfer"
     };
 

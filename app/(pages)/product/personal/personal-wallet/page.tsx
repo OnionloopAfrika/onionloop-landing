@@ -5,7 +5,7 @@ const page = () => {
     const personalWalletHero = {
     title: "Personal Wallet",
     description: "Receive funds, make secure payments, track your balance in real time, and withdraw your money anytime — all in one wallet. Onionloop keeps everything in one place, giving you full control and confidence over your everyday transactions.",
-    imageSrc: "/personal-wallet.png",
+        imageSrc: "/personal-wallet-f.png",
     imageAlt: "Man pointing to transaction confirmation"
 };
 
