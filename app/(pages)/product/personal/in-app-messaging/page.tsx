@@ -1,36 +1,36 @@
-import { BellIcon, MoneyTime, SafeIcon} from '@/app/components/icons/svgs';
+import { BellIcon, MoneyTime, SafeIcon } from '@/app/components/icons/svgs';
 import { FeatureSection } from '@/app/components/sections/Produts';
 
 const page = () => {
 
     const messagingHero = {
-    title: "In-App-Messaging",
-    description: "Keep conversations and payments connected. Message your contacts about transactions you’ve sent or received, with chats linked to each payment for easy tracking and clear communication — all within Onionloop.",
-    imageSrc: "/messaging.png",
-    imageAlt: "Woman using chat feature on phone"
-};
+        title: "In-App-Messaging",
+        description: "Message Onionloop users about money you send or receive. Each chat is linked to the transaction so you can see it easily.",
+        imageSrc: "/messaging.png",
+        imageAlt: "Woman using chat feature on phone"
+    };
 
-const messagingGrid = {
-    title: "Chat While You Pay",
-    description: "Built-in messaging keeps your payment conversations secure and organized. No more switching between apps.",
-    features: [
-        {
-            icon: <BellIcon />,
-            title: "Real-Time Notifications",
-            description: "Stay updated instantly when you get a new message or response."
-        },
-        {
-            icon: <MoneyTime />,
-            title: "Payment Requests",
-            description: "Request money directly in chat. Recipients can pay with one tap, keeping everything in context."
-        },
-        {
-            icon: <SafeIcon />,
-            title: "End-to-End Encryption",
-            description: "Messages are private encrypted so only you and the recipient can read them."
-        }
-    ]
-};
+    const messagingGrid = {
+        title: "Chat While You Pay",
+        description: "Built-in messaging keeps your payment conversations secure and organized. No more switching between apps.",
+        features: [
+            {
+                icon: <BellIcon />,
+                title: "Real-Time Notifications",
+                description: "Stay updated instantly when you get a new message or reply."
+            },
+            {
+                icon: <MoneyTime />,
+                title: "Payment Requests",
+                description: "Request a payment in the chat. The receiver can pay with one tap."
+            },
+            {
+                icon: <SafeIcon />,
+                title: "End-to-End Encryption",
+                description: "Only you and the receiver can read the messages."
+            }
+        ]
+    };
     return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
@@ -47,7 +47,7 @@ const messagingGrid = {
                         In-App-Messaging
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Chat Instantly <span className="text-[#04907E]">During</span> Payments
+                        Chat Instantly <span className="text-[#9BC41D]">During</span> Payments
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.

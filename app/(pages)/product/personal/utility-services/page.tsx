@@ -1,37 +1,36 @@
-import { BellIcon, QrIcon, SafeIcon, UnifiedWallet, WalletFill } from '@/app/components/icons/svgs';
+import { BellIcon, Bills, FoodsIcon, MoneyTime, RidesIcon, SafeIcon, Service } from '@/app/components/icons/svgs';
 import { FeatureSection } from '@/app/components/sections/Produts';
 
 const page = () => {
-    const personalWalletHero = {
-        title: "Personal Wallet",
-        description: "Onionloop Personal wallet helps you receive money, make secure payments, track your balance in real time, and withdraw your money anytime.",
-        imageSrc: "/personal-wallet-f.png",
-        imageAlt: "Man pointing to transaction confirmation"
+
+    const utilitiesHero = {
+        title: "Utility Services",
+        description: "From your morning ride to your evening data top-up, Onionloop helps makes payment easy. No new accounts, no extra apps to juggle.",
+        imageSrc: "/util.png",
+        imageAlt: "Woman using chat feature on phone"
     };
 
-    const personalWalletGrid = {
-        title: "Your Money, Your Wallets",
-        description: "Store, manage, and spend your money all in one secure digital wallet. Link multiple accounts and access your funds instantly.",
+    const utilsGrid = {
+        title: "Built Around Your Day",
+        description: "Whatever services you're paying for next, it's already in here.",
         features: [
             {
-                icon: <UnifiedWallet />,
-                title: "Unified Wallet Balance",
-                description: "See all your money in one place with an easy-to-read balance that updates in real time."
+                icon: <RidesIcon />,
+                title: "Ride Services",
+                description: "Book a ride and pay straight from your wallet. See the fare upfront and if it changes mid-trip, we'll tell you first."
             },
             {
-                icon: <BellIcon />,
-                title: "Instant Confirmation",
-                description: "Get notifications right away when money is sent or received."
+                icon: <FoodsIcon />,
+                title: "Food & Delivery",
+                description: "Order from nearby restaurants or marts and pay once at checkout. No separate delivery wallet, no card details to re-enter."
             },
             {
-                icon: <SafeIcon />,
-                title: "Secure & Encrypted",
-                description: "Your payments are private and protected. No need to type long account numbers or remember details."
+                icon: <Bills />,
+                title: "Bills",
+                description: "Bills & Top-Ups Top up airtime, buy data, or pay an electricity bill in under a minute. Prepaid or postpaid, all in one place."
             }
         ]
     };
-
-
     return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
@@ -45,20 +44,19 @@ const page = () => {
                             <path d="M4 17V19" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M5 18H3" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Personal Wallets
+                        Utility Services
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Everyday Payments Made <span className="text-[#9BC41D]">Simple</span>
+                        Every Bill, <span className="text-[#9BC41D]">Sorted</span> In One Place.
                     </h1>
                     <p className="text-black text-base">
-                        Personal Wallet is a safe and digital place inside the <br className='max-lg:hidden' /> Onionloop app that holds your money.
+                        Top up airtime, buy data, pay electricity from your wallet.
                     </p>
                 </div>
             </div>
 
             {/* ========================================================================= */}
-            <FeatureSection heroData={personalWalletHero} gridData={personalWalletGrid} />;
-
+            <FeatureSection heroData={utilitiesHero} gridData={utilsGrid} />;
         </div>
     )
 }

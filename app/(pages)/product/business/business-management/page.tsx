@@ -1,38 +1,38 @@
-import { BellIcon, MessageIcon, SafeIcon } from "@/app/components/icons/svgs";
+import { BellIcon, MessageIcon, Messaging, SafeIcon } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
 const page = () => {
 
-    const businessManagementHero  = {
-    title: "Business Management",
-    description: "Run your business smarter, not harder Link products to dynamic QR codes so stock levels update automatically after each sale. Assign roles to staff—super admins control everything, while sub-admins get limited permissions based on their role.",
-    imageSrc: "/business-management.png",
-    imageAlt: "Manager overseeing operations on mobile"
-};
+    const businessManagementHero = {
+        title: "Business Management",
+        description: "Link products to QR codes that can be updated so stock levels update automatically after each sale. Assign roles to staff-super admins control everything, while sub-admins get limited permissions based on their role.",
+        imageSrc: "/business-management.png",
+        imageAlt: "Manager overseeing operations on mobile"
+    };
 
-const businessManagementGrid = {
-    title: "Smart Business Management",
-    description: "Manage your payments, wallets, and team activity—all from one intuitive dashboard. Stay in control, make informed decisions, and keep your business running smoothly.",
-    features: [
-        {
-            icon: <BellIcon />,
-            title: "Instant Notifications",
-            description: "Get real-time updates on payments, disputes, or wallet activity so nothing is missed."
-        },
-        {
-            icon: <SafeIcon />,
-            title: "Secure Access Controls",
-            description: "Set permissions and restrict access to sensitive data for enhanced security"
-        },
-        {
-            icon: <MessageIcon />,
-            title: "Integrated Messaging",
-            description: "Communicate directly with customers regarding transactions without leaving the app"
-        }
-    ]
-};
+    const businessManagementGrid = {
+        title: "Smart Business Management",
+        description: "Manage your payments, wallets, and team activity—all from one intuitive dashboard. Stay in control, make informed decisions, and keep your business running smoothly.",
+        features: [
+            {
+                icon: <BellIcon />,
+                title: "Instant Notifications",
+                description: "Get updates right away when payments happen, or if there is any activity in your wallet."
+            },
+            {
+                icon: <SafeIcon />,
+                title: "Secure Access Controls",
+                description: "Decide who can see or change important business information to keep your money safe."
+            },
+            {
+                icon: <Messaging />,
+                title: "Integrated Messaging",
+                description: "Communicate directly with customers regarding transactions without leaving the app"
+            }
+        ]
+    };
 
-  return (
+    return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
@@ -48,10 +48,10 @@ const businessManagementGrid = {
                         Business Management
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Run Your Business with<span className="text-[#04907E]"> Confidence</span>
+                        Run Your Business with<span className="text-[#9BC41D]"> Confidence</span>
                     </h1>
                     <p className="text-black text-base">
-                        Pay friends, family, and businesses securely using QR code.
+                        Business Management helps you handle money, products, <br className="max-lg:hidden" /> and your team all in one place.
                     </p>
                 </div>
             </div>
@@ -59,7 +59,7 @@ const businessManagementGrid = {
             {/* ========================================================================= */}
             <FeatureSection heroData={businessManagementHero} gridData={businessManagementGrid} />;
         </div>
-  )
+    )
 }
 
 export default page
