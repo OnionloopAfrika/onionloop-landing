@@ -1,36 +1,36 @@
-import { Light, LinkCircle, SafeIcon } from "@/app/components/icons/svgs";
+import { Light, LinkCircle, Multiple, SafeIcon } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
 const page = () => {
     const withdrawalsHero = {
-    title: "Withdrawals",
-    description: "Move money when you need it—safely and clearly Transfer funds from your Business Wallet to any verified bank account with one tap. Track every withdrawal in real time: Processing → Sent → Credited. Your balance updates instantly after settlement.",
-    imageSrc: "/withdrawals.png",
-    imageAlt: "Person withdrawing funds on phone"
-};
+        title: "Withdrawals",
+        description: "Transfer money from your Business Wallet to any verified bank account with one tap. You can see if a withdrawal is processed, sent, or credited. Your balance updates right after the transfer is completed.",
+        imageSrc: "/withdrawals.png",
+        imageAlt: "Person withdrawing funds on phone"
+    };
 
-const withdrawalsGrid = {
-    title: "Take Control of Your Cash Flow",
-    description: "Access your business funds anytime with instant, secure withdrawals—directly to your bank account or preferred wallet, with full control and transparency.",
-    features: [
-        {
-            icon: <Light />,
-            title: "Instant Transfers",
-            description: "Move funds from your Onionloop wallet to your bank account or preferred wallet instantly"
-        },
-        {
-            icon: <LinkCircle />,
-            title: "Multiple Bank & Wallet Support",
-            description: "Withdraw to any linked account or wallet, making fund management flexible."
-        },
-        {
-            icon: <SafeIcon />,
-            title: "Secure Transactions",
-            description: "Every withdrawal is protected with built-in security measures, giving you peace of mind."
-        }
-    ]
-};
-  return (
+    const withdrawalsGrid = {
+        title: "Take Control of Your Cash Flow",
+        description: "Access your business funds anytime with instant, secure withdrawals—directly to your bank account or preferred wallet, with full control and transparency.",
+        features: [
+            {
+                icon: <Light />,
+                title: "Instant Transfers",
+                description: "Move money from your Onionloop wallet to your bank account or another wallet right away."
+            },
+            {
+                icon: <Multiple />,
+                title: "Multiple Bank & Wallet Support",
+                description: "Withdraw to any account or wallet you have connected, making it easy to manage your money."
+            },
+            {
+                icon: <SafeIcon />,
+                title: "Secure Transactions",
+                description: "Every withdrawal is protected with built-in security so your money stays safe."
+            }
+        ]
+    };
+    return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
@@ -46,7 +46,7 @@ const withdrawalsGrid = {
                         Withdrawals
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Fast & Flexible <span className="text-[#04907E]">Withdrawals</span>
+                        Fast & Flexible <span className="text-[#9BC41D]">Withdrawals</span>
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.
@@ -57,7 +57,7 @@ const withdrawalsGrid = {
             {/* ========================================================================= */}
             <FeatureSection heroData={withdrawalsHero} gridData={withdrawalsGrid} />;
         </div>
-  )
+    )
 }
 
 export default page

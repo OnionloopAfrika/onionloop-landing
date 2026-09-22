@@ -16,10 +16,22 @@ const Main = () => {
             image: "/qr-payments.png",
         },
         {
-            id: "payment-confirmation",
+            id: "cash-services",
             title: "Cash Services",
             description: "Deposit or withdraw cash through verified Onionloop agents. Your balance updates instantly, with every transaction securely protected.",
             image: "/cash-services.png",
+        },
+        {
+            id: "savings",
+            title: "Savings",
+            description: "Save daily, with a Collector or on your own on the app. Every contribution is automatically tracked and confirmed, so you always know where your savings stand.",
+            image: "/landing-savings.png",
+        },
+        {
+            id: "utility-services",
+            title: "Utility Services",
+            description: "Order food, book a ride, or pay a bill anytime. Every payment comes straight from your wallet, so you never need a separate app.",
+            image: "/util.png",
         },
         {
             id: "personal-wallet",
@@ -36,7 +48,7 @@ const Main = () => {
         {
             id: "rewards",
             title: "Earn Onioncoins",
-            description: "Get Onioncoins as rewards when you send money. They are tracked separately from your wallet balance.",
+            description: "Get Onioncoins as rewards when you send or recieve money. They are tracked separately from your wallet balance.",
             image: "/onioncoins.png",
         },
         {
@@ -163,7 +175,7 @@ const Main = () => {
                             </svg>
                         </Link>
 
-                        <div className={`${index === 0 && mode === "personal" && "bottom-0"} ${index === 3 && mode ==="business" && "-bottom-10"} absolute -bottom-4 right-0 w-72 h-72 pointer-events-none`}>
+                        <div className={`${index === 0 && mode === "personal" && "bottom-0"} ${index === 3 && mode === "business" && "-bottom-10"} absolute -bottom-4 right-0 w-72 h-72 pointer-events-none`}>
                             <Image
                                 src={item.image}
                                 alt={item.title}

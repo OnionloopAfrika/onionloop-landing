@@ -4,34 +4,34 @@ import { FeatureSection } from "@/app/components/sections/Produts";
 const page = () => {
 
     const businessQRHero = {
-    title: "Agency Banking",
-    description: "Accept payments instantly with Onionloop QR codes. No cash, no terminals, and no bank details shared. Use QR codes that cannot change or can be updated, and check each payment before money is sent.",
-    imageSrc: "/agency-banking.png",
-    imageAlt: "Business owner accepting payment on phone"
-};
+        title: "Agency Banking",
+        description: "Accept payments instantly with Onionloop QR codes. No cash, no terminals, and no bank details shared. Use QR codes that cannot change or can be updated, and check each payment before money is sent.",
+        imageSrc: "/agency.png",
+        imageAlt: "Business owner accepting payment on phone"
+    };
 
-const businessQRGrid = {
-    title: "Get Paid Instantly with Onionloop QR",
-    description: "A smarter way for businesses to accept payments, confirm transactions, and track every sale.",
-    features: [
-        {
-            icon: <QrIcon />,
-            title: "Instant QR Payments",
-            description: "Accept fast, secure payments with static or dynamic QR codes—no cash to manage and no bank details exposed."
-        },
-        {
-            icon: <BellIcon />,
-            title: "Instant Confirmation & Transparency",
-            description: "Customers review and confirm payment details before funds are sent, reducing errors and ensuring every transaction is accurate"
-        },
-        {
-            icon: <HistoryIcon />,
-            title: "Real-Time Tracking & Records",
-            description: "View payments instantly with clear status updates, making it easy to track sales and manage your business."
-        }
-    ]
-};
-  return (
+    const businessQRGrid = {
+        title: "Get Paid Instantly with Onionloop QR",
+        description: "A smarter way for businesses to accept payments, confirm transactions, and track every sale.",
+        features: [
+            {
+                icon: <QrIcon />,
+                title: "Instant QR Payments",
+                description: "Accept fast and secure payments with QR codes that can’t change or can be updated. No cash to handle and no bank details shared."
+            },
+            {
+                icon: <BellIcon />,
+                title: "Instant Confirmation & Transparency",
+                description: "Customers check and confirm payment details before sending money. This helps prevent mistakes and ensures every payment is correct."
+            },
+            {
+                icon: <HistoryIcon />,
+                title: "Real-Time Tracking & Records",
+                description: "See all payments right away and know if they went through. This makes it easy to track sales and manage your business."
+            }
+        ]
+    };
+    return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
@@ -44,10 +44,10 @@ const businessQRGrid = {
                             <path d="M4 17V19" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M5 18H3" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        QR Payments
+                        Agency Banking
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Simple QR Payments for Every <span className="text-[#04907E]">Business </span>
+                        Simple QR Payments for Every <span className="text-[#9BC41D]">Business </span>
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.
@@ -58,7 +58,7 @@ const businessQRGrid = {
             {/* ========================================================================= */}
             <FeatureSection heroData={businessQRHero} gridData={businessQRGrid} />;
         </div>
-  )
+    )
 }
 
 export default page

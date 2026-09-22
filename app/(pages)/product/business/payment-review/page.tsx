@@ -1,36 +1,36 @@
-import { CashIcon, ReceiptIcon, SecurityIcon } from "@/app/components/icons/svgs";
+import { ActivePayment, CashIcon, ReceiptIcon, SecurityIcon } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
 const page = () => {
     const paymentReviewHero = {
-    title: "Payment Review",
-    description: "Before a payment is completed, customers clearly see your business name, logo, and the exact amount. This transparency builds trust at checkout, minimizes disputes, and ensures you receive accurate payments every time with Onionloop.",
-    imageSrc: "/payment-review.png",
-    imageAlt: "User reviewing payment details on phone"
-};
+        title: "Payment Review",
+        description: "Payment Review lets your customers see your business name, logo, and the exact amount before paying. This helps build trust, reduce mistakes, and make sure you get the right payment every time.",
+        imageSrc: "/payment-review.png",
+        imageAlt: "User reviewing payment details on phone"
+    };
 
-const paymentReviewGrid = {
-    title: "Smart Payments for Modern Businesses",
-    description: "With Onionloop, every transaction is secure, transparent, and fully protected—giving your business and your customers peace of mind at every payment.",
-    features: [
-        {
-            icon: <ReceiptIcon />,
-            title: "Transparent Checkout",
-            description: "Customers see your business name, logo, and exact amount before paying, building trust at every transaction."
-        },
-        {
-            icon: <CashIcon />,
-            title: "Accurate Payments",
-            description: "Ensure you receive the right payment every time, minimizing errors and disputes."
-        },
-        {
-            icon: <SecurityIcon />,
-            title: "Dispute Reduction",
-            description: "Clear payment details help prevent chargebacks and misunderstandings, protecting your revenue"
-        }
-    ]
-};
-  return (
+    const paymentReviewGrid = {
+        title: "Smart Payments for Modern Businesses",
+        description: "With Onionloop, every transaction is secure, transparent, and fully protected—giving your business and your customers peace of mind at every payment.",
+        features: [
+            {
+                icon: <ReceiptIcon />,
+                title: "Transparent Checkout",
+                description: "Customers see your business name, logo, and exact amount before paying. This helps build trust."
+            },
+            {
+                icon: <ActivePayment />,
+                title: "Accurate Payments",
+                description: "Get the right payment every time and reduce mistakes."
+            },
+            {
+                icon: <SecurityIcon />,
+                title: "Dispute Reduction",
+                description: "Clear payment details help prevent chargebacks and misunderstandings, protecting your revenue"
+            }
+        ]
+    };
+    return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
@@ -46,7 +46,7 @@ const paymentReviewGrid = {
                         Payment Review
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Transparent Checkout for Every <span className="text-[#04907E]">Transaction</span>
+                        Transparent Checkout for Every <span className="text-[#9BC41D]">Transaction</span>
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.
@@ -57,7 +57,7 @@ const paymentReviewGrid = {
             {/* ========================================================================= */}
             <FeatureSection heroData={paymentReviewHero} gridData={paymentReviewGrid} />;
         </div>
-  )
+    )
 }
 
 export default page

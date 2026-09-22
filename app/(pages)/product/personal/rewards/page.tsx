@@ -46,7 +46,7 @@ const page = () => {
                         Earn Rewards
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Earn <span className="text-[#04907E]">OnionCoins </span> for every completed transaction
+                        Earn <span className="text-[#9BC41D]">OnionCoins </span> for every completed transaction
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.

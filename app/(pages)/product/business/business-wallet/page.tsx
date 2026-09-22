@@ -1,39 +1,39 @@
-import { BusinessWallet, HourGlass, ShieldCheck} from "@/app/components/icons/svgs";
+import { BusinessWallet, HourGlass, ShieldCheck } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
 const page = () => {
 
     const businessWalletHero = {
-    title: "Business Wallet",
-    description: "Your dedicated hub for all business funds. All customer payments land in a separate, secure wallet—never mixed with personal money. View real-time balances, manage up to 3 linked bank accounts, and control who on your team can access funds.",
-    imageSrc: "/business-wallet.png",
-    imageAlt: "Business owner managing funds"
-};
+        title: "Business Wallet",
+        description: "Business Wallet is a secure place in the onionloop app where customer payments go. It never mixed with personal money, making it well organized.You can track balances in real time, link up to three bank accounts, and control who on your team can access the money.",
+        imageSrc: "/business-wallet.png",
+        imageAlt: "Business owner managing funds"
+    };
 
-const businessWalletGrid = {
-    title: "Your Business Wallet, Simplified",
-    description: "Keep your payments organized with a secure wallet that makes managing business funds easy and transparent.",
-    features: [
-        {
-            icon: <BusinessWallet />,
-            title: "Dedicated Business Wallets",
-            description: "Keep your business funds separate and organized with wallets built specifically for business transactions."
-        },
-        {
-            icon: <HourGlass />,
-            title: "Real-Time Balance Tracking",
-            description: "Monitor incoming payments and wallet balances instantly, giving you full visibility over your cash flow."
-        },
-        {
-            icon: <ShieldCheck />,
-            title: "Secure Fund Management",
-            description: "Protect your money with built-in security and controlled access designed for safe, reliable transactions."
-        }
-    ]
-};
+    const businessWalletGrid = {
+        title: "Your Business Wallet, Simplified",
+        description: "Keep your payments organized wit",
+        features: [
+            {
+                icon: <BusinessWallet />,
+                title: "Dedicated Business Wallets",
+                description: "Keep your business funds separate and organized with wallets built specifically for business transactions."
+            },
+            {
+                icon: <HourGlass />,
+                title: "Real-Time Balance Tracking",
+                description: "See incoming payments and wallet balances instantly so you always know how much money you have."
+            },
+            {
+                icon: <ShieldCheck />,
+                title: "Secure Fund Management",
+                description: "Your money is protected with built-in security and controlled access for safe and reliable transactions."
+            }
+        ]
+    };
 
 
-  return (
+    return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
@@ -49,7 +49,7 @@ const businessWalletGrid = {
                         Business Wallet
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                       Business <span className="text-[#04907E]">Wallets Built  </span>for Control
+                        Business <span className="text-[#9BC41D]">Wallets Built  </span>for Control
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.
@@ -60,7 +60,7 @@ const businessWalletGrid = {
             {/* ========================================================================= */}
             <FeatureSection heroData={businessWalletHero} gridData={businessWalletGrid} />;
         </div>
-  )
+    )
 }
 
 export default page

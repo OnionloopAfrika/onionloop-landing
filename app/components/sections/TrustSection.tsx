@@ -9,10 +9,10 @@ const TrustSection = () => {
     const { mode } = useMode()
 
     const personalPoints = [
-        "QR codes won't show your account balance or private information to receiver.",
-        "You see who's getting the money before you send it.",
-        "You need your PIN or biometrics to approve payments.",
-        "Confirm your personal details and enjoy more benefits."
+        "Users are verified before they can send, save, or receive money.",
+        "Ajo/Thrift contributions are tracked from collector to wallet, with a clear record at every step.",
+        "Agents and Collectors who handle your money are verified by Onionloop and held accountable.",
+        "Savings withdrawals are checked before they’re paid out, so your money doesn’t leave without oversight."
     ]
 
     const businessPoints = [
@@ -39,11 +39,10 @@ const TrustSection = () => {
                 <p
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    className="text-[#4D4D4D] text-base max-w-2xl leading-snug"
+                    className="text-[#4D4D4D] text-base  leading-snug"
                     style={{ overflow: "clip" }}
                 >
-                    Onionloop combines minimal data sharing, recipient confirmation, and identity verification to reduce mistakes and misuse during payments.
-                </p>
+                    From verified accounts to confirmed savings records, Onionloop is built so you always know where your money is and what happens to it next.</p>
             </div>
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
