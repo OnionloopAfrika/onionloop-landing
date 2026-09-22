@@ -4,7 +4,7 @@ import { FeatureSection } from '@/app/components/sections/Produts';
 const page = () => {
     const bankTransferHero = {
         title: "Bank Transfer",
-        description: "Move money within Onionloop or transfer funds to your linked bank account anytime. Every transfer is secure, tracked in real time, and clearly labeled so you always know the status of your money.",
+        description: "Move money inside Onionloop or send it to your connected bank account. Each transfer shows if it’s pending, completed, or failed.",
         imageSrc: "/bank-transfers.png",
         imageAlt: "Woman holding phone for bank transfer"
     };
@@ -46,7 +46,7 @@ const page = () => {
                         Money Transfer
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Move <span className="text-[#04907E]">Your Money </span>with Confidence.
+                        Move <span className="text-[#9BC41D]">Your Money </span>with Confidence.
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.

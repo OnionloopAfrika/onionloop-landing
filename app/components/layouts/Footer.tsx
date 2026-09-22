@@ -166,7 +166,9 @@ export default function Footer() {
               <h4 className="text-sm font-normal text-(--text-tertiary) mb-3">Product For Personal</h4>
               <ul className="space-y-2">
                 <li><a href="/product/personal/qr-payments" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">QR Payment</a></li>
-                <li><a href="/product/personal/payment-confirmation" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">Cash Services</a></li>
+                <li><a href="/product/personal/cash-services" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">Cash Services</a></li>
+                <li><a href="/product/personal/utility-services" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">Utility Services</a></li>
+                <li><a href="/product/personal/savings" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">Savings</a></li>
                 <li><a href="/product/personal/personal-wallet" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">Personal Wallet</a></li>
                 <li><a href="/product/personal/money-transfer" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">Money Transfers</a></li>
                 <li><a href="/product/personal/in-app-messaging" className="text-sm text-(--text-tertiary) hover:text-(--primary) font-semibold">In app Messaging</a></li>

@@ -34,7 +34,11 @@ const productData = {
   ],
 }
 
-export default function ProductDropdown() {
+type ProductDropdownProps = {
+  onItemClick?: () => void
+}
+
+export default function ProductDropdown({ onItemClick }: ProductDropdownProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [hoveredId, setHoveredId] = useState<string | null>(null)
   const { mode } = useMode()
@@ -79,6 +83,11 @@ export default function ProductDropdown() {
                   <a
                     key={category.id}
                     href={`/product/${mode}/${category.id}`}
+                    onClick={() => {
+                      setIsOpen(false)
+                      setHoveredId(null)
+                      onItemClick?.()
+                    }}
                     onMouseEnter={() => setHoveredId(category.id)}
                     onMouseLeave={() => setHoveredId(null)}
                     className="flex items-start gap-2 cursor-pointer px-4 py-3 rounded-xl border border-gray-50 transition-all hover:bg-[#F6FCE9] hover:border-[#D9EBB3] group/item"

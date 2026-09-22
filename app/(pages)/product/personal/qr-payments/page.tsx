@@ -23,7 +23,7 @@ const page = () => {
     }
     const heroData: HeroSectionData = {
         title: "QR Payments",
-        description: "Send and receive money instantly with QR codes, track your balance in real time, and make secure payments — all in one trusted platform.",
+        description: "Receive money, send money, see your balance and withdraw money at any time.",
         imageSrc: "/qr-payments.png",
         imageAlt: "Man using mobile payment app"
     };
@@ -38,12 +38,12 @@ const page = () => {
                 description: "Scan and pay in seconds. No need to type long account numbers or remember details."
             },
             {
-                icon: <BellIcon/>,
+                icon: <BellIcon />,
                 title: "Instant Confirmation",
                 description: "Real-time payment notifications. Know immediately when money arrives or is sent."
             },
             {
-                icon: <SafeIcon/>,
+                icon: <SafeIcon />,
                 title: "Secure & Encrypted",
                 description: "Scan and pay in seconds. No need to type long account numbers or remember details."
             }
@@ -66,14 +66,14 @@ const page = () => {
                         QR Payments
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Send and Receive Money <span className="text-[#04907E]">Instantly</span>
+                        Send and Receive Money <span className="text-[#9BC41D]">Instantly</span>
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.
                     </p>
                 </div>
             </div>
-    
+
             {/* ========================================================================= */}
             <FeatureSection heroData={heroData} gridData={gridData} />;
         </div>
