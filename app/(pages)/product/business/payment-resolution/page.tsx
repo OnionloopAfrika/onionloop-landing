@@ -3,34 +3,34 @@ import { FeatureSection } from "@/app/components/sections/Produts";
 
 const page = () => {
     const paymentResolutionHero = {
-    title: "Payment Resolution",
-    description: "Resolve payment issues instantly in-app. Regenerate QR codes, clarify charges, and communicate directly on each transaction—no missed calls, no messy chats, just fast resolution.",
-    imageSrc: "/payment-resolution.png",
-    imageAlt: "Business owner resolving issue on phone"
-};
+        title: "Payment Resolution",
+        description: "Payment Resolution lets your business handle payment issues instantly inside onionloop app.",
+        imageSrc: "/payment-resolution.png",
+        imageAlt: "Business owner resolving issue on phone"
+    };
 
-const paymentResolutionGrid  = {
-    title: "Resolve Payment Issues Instantly",
-    description: "Handle charge questions, updates, and corrections directly in-app with transaction-linked tools that keep every payment clear, fast, and controlled.",
-    features: [
-        {
-            icon: <QrIcon />,
-            title: "Instant QR Regeneration",
-            description: "Quickly update or correct payments by generating a new QR code in seconds"
-        },
-        {
-            icon: <MessageIcon />,
-            title: "Transaction-Linked Messaging",
-            description: "Communicate directly with customers on each payment to clarify issues and changes."
-        },
-        {
-            icon: <SpeedometerIcon />,
-            title: "Faster Issue Closure",
-            description: "Resolve disputes quickly in one place—no calls, no external chats, no confusion."
-        }
-    ]
-};
-  return (
+    const paymentResolutionGrid = {
+        title: "Resolve Payment Issues Instantly",
+        description: "Handle charge questions, updates, and corrections directly in-app with transaction-linked tools that keep every payment clear, fast, and controlled.",
+        features: [
+            {
+                icon: <QrIcon />,
+                title: "Instant QR Regeneration",
+                description: "Fix or update payments quickly by creating a new QR code in seconds."
+            },
+            {
+                icon: <MessageIcon />,
+                title: "Transaction-Linked Messaging",
+                description: "Send messages about each payment to customers to explain issues or changes."
+            },
+            {
+                icon: <SpeedometerIcon />,
+                title: "Faster Issue Closure",
+                description: "Solve payment problems quickly in one place - no phone calls, no outside chats, no confusion."
+            }
+        ]
+    };
+    return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
                 <div className="w-full about-gradient absolute top-0 bottom-0 right-0 h-145 -z-1"></div>
@@ -46,7 +46,7 @@ const paymentResolutionGrid  = {
                         Payment Resolution
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Clear, Controlled Payment<span className="text-[#04907E]"> Resolution </span>
+                        Clear, Controlled Payment<span className="text-[#9BC41D]"> Resolution </span>
                     </h1>
                     <p className="text-black text-base">
                         Pay friends, family, and businesses securely using QR code.
@@ -57,7 +57,7 @@ const paymentResolutionGrid  = {
             {/* ========================================================================= */}
             <FeatureSection heroData={paymentResolutionHero} gridData={paymentResolutionGrid} />;
         </div>
-  )
+    )
 }
 
 export default page

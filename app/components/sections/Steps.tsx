@@ -108,27 +108,29 @@ export default function Steps() {
         className="max-w-7xl mx-auto border-[3px] border-[#CCEA6F] rounded-[40px] p-8 md:p-16 bg-white"
         data-aos="fade-up"
       >
-        <div className="hidden md:flex items-center justify-between overflow-clip">
+        <div className="hidden md:flex justify-between overflow-clip ">
           {steps.map((step, index) => (
             <div key={step.id} className="flex flex-1 items-center">
               {/* Step Content */}
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="mb-12 flex items-center justify-center">
+              <div className="flex flex-col items-center text-center gap-2 ">
+                <div className="mb-12 flex items-center justify-center ">
                   <img
                     src={step.image}
                     alt={step.title}
                     className="w-56 h-72 object-contain drop-shadow-2xl"
                   />
                 </div>
+                <div className=" min-h-[200px]">
+                  <div className="mb-4 flex items-center justify-center ">
+                    {step.icons}
+                  </div>
 
-                <div className="mb-4 flex items-center justify-center">
-                  {step.icons}
+                  <h3 className="text-[#008561] text-base font-bold mb-3">{step.title}</h3>
+                  <p className="text-[#475467] text-sm max-w-50">
+                    {step.description}
+                  </p>
                 </div>
 
-                <h3 className="text-[#008561] text-base font-bold mb-3">{step.title}</h3>
-                <p className="text-[#475467] text-sm max-w-50">
-                  {step.description}
-                </p>
               </div>
 
               {/* Connecting Line */}

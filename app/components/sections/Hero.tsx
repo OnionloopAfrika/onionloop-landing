@@ -20,7 +20,7 @@ export default function Hero() {
                         <div className="space-y-4 z-10 text-center md:text-left">
                             <div data-aos="fade-up">
                                 <h1 className="text-4xl md:text-5xl font-bold leading-tight font-poppins text-(--primary-light)">
-                                    Avoid Sending <br /> Money To The Wrong Account
+                                    Scan To Pay. <br /> Do More With One <br />Wallet.
                                 </h1>
                             </div>
 
@@ -29,8 +29,16 @@ export default function Hero() {
                                 data-aos-delay="150"
                                 className="text-base md:text-lg text-(--text-main) leading-relaxed max-w-100"
                             >
-                                Scan the receiver QR code, confirm details and send money.
+                                Pay for everyday purchases with QR payments, all from your Onionloop wallet. Spend, save, and manage your money in one place.
                             </p>
+
+                            <p
+                                data-aos="fade-up"
+                                data-aos-delay="150"
+                                className="text-base md:text-lg text-(--text-main) leading-relaxed max-w-100"
+                            >
+                                QR payment for everyday purchases. Spend, save, and manage your money in one place.                            </p>
+
 
                             <div
                                 data-aos="fade-up"

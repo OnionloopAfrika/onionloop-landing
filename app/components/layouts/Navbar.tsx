@@ -84,8 +84,8 @@ export default function Navbar() {
 
         {mobileMenuOpen && (
           <div className="lg:hidden pb-4 border-t border-gray-200 pt-4 flex flex-col items-center gap-4 max-h-[75vh] overflow-y-auto scrollbar-green">
-            <ModeToggle />
-            <ProductDropdown />
+            <ModeToggle onItemClick={() => setMobileMenuOpen(false)} />
+            <ProductDropdown onItemClick={() => setMobileMenuOpen(false)} />
             <a
               href="/about"
               className="block text-sm text-(--text-main) hover:text-gray-900 py-2 transition-colors"
@@ -114,3 +114,10 @@ export default function Navbar() {
     </nav>
   )
 }
+
+
+
+
+
+
+

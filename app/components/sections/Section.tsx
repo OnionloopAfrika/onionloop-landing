@@ -4,6 +4,8 @@ import { useMode } from "@/app/context/ModeContext"
 import { useRouter } from "next/navigation"
 import "aos/dist/aos.css"
 import {
+    BuildIcon,
+    CashWorks,
     ChartIcon,
     CloseEye,
     GuardIcon,
@@ -12,6 +14,8 @@ import {
     Star,
     TickCircle,
     TickIcon,
+    TimeIcon,
+    TimerIcon,
     WarningIcon
 } from "../icons/svgs"
 import Link from "next/link"
@@ -20,24 +24,24 @@ import Image from "next/image"
 const Section = () => {
     const personal = [
         {
-            icon: <CloseEye />,
-            title: "Less information shared ",
+            icon: <TimeIcon />,
+            title: "Save Time",
             description: "No need for your bank details or phone number to send or receive money."
         },
         {
-            icon: <GuardIcon />,
-            title: "Fewer wrong transfers",
-            description: "You see the receiver’s name and avatar before sending money."
+            icon: <BuildIcon />,
+            title: "Build A Saving Habit",
+            description: "Save daily, your way either with a verified Onionloop Collector or straight from your wallet."
         },
         {
             icon: <OpenEyeIcon />,
-            title: "Clear payment control",
-            description: "Nothing happens until you check the details and approve the payment."
+            title: "See Everything Clearly",
+            description: "Single wallet, clear activity feed. Know exactly what's pending and what's done."
         },
         {
-            icon: <ChartIcon />,
-            title: "Clear Transaction Results",
-            description: "You can see which payments went through and which didn’t."
+            icon: <CashWorks />,
+            title: "Cash Still Works",
+            description: "No smartphone only bias. Fund or withdraw cash through an Agent near you, anytime."
         },
     ]
 
@@ -98,7 +102,7 @@ const Section = () => {
                     data-aos="fade-up"
                     className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium"
                 >
-                    <Star /> {mode === "personal" ? "Payments that fit into everyday life" : "Business Made Simple"}
+                    <Star /> {mode === "personal" ? "Benefit section" : "Business Made Simple"}
                 </div>
 
                 <h1
@@ -107,7 +111,7 @@ const Section = () => {
                     className="text-2xl md:text-4xl max-w-200 font-bold text-center p-4"
                 >
                     {mode === "personal"
-                        ? "The essential actions that power secured QR-based payments on Onionloop."
+                        ? "The parts of your day that involve your money with Onionloop, all in one place."
                         : " Outcomes businesses experience when accepting payments with Onionloop."}
                 </h1>
             </header>

@@ -1,37 +1,36 @@
-import { BellIcon, QrIcon, SafeIcon, UnifiedWallet, WalletFill } from '@/app/components/icons/svgs';
+import { BellIcon, MoneyTime, SafeIcon, Service } from '@/app/components/icons/svgs';
 import { FeatureSection } from '@/app/components/sections/Produts';
 
 const page = () => {
-    const personalWalletHero = {
-        title: "Personal Wallet",
-        description: "Onionloop Personal wallet helps you receive money, make secure payments, track your balance in real time, and withdraw your money anytime.",
-        imageSrc: "/personal-wallet-f.png",
-        imageAlt: "Man pointing to transaction confirmation"
+
+    const cashServiceHero = {
+        title: "Cash Services",
+        description: "Each transaction is confirmed in the app and shows in your wallet immediately, making cash access simple, safe, and private Onionloop agents are trusted people or locations approved by Onionloop. They help you add cash to your wallet or withdraw cash from it.",
+        imageSrc: "/cash-services.png",
+        imageAlt: "Woman using chat feature on phone"
     };
 
-    const personalWalletGrid = {
-        title: "Your Money, Your Wallets",
-        description: "Store, manage, and spend your money all in one secure digital wallet. Link multiple accounts and access your funds instantly.",
+    const cashServiceGrid = {
+        title: "Your Cash Is Always Safe",
+        description: "We protect every transaction with multiple layers of security and community verification. Your trust is our foundation.",
         features: [
             {
-                icon: <UnifiedWallet />,
-                title: "Unified Wallet Balance",
-                description: "See all your money in one place with an easy-to-read balance that updates in real time."
+                icon: <BellIcon />,
+                title: "Cash Deposits",
+                description: "Deposit physical cash through a verified Agent by scanning your QR code. "
             },
             {
-                icon: <BellIcon />,
-                title: "Instant Confirmation",
-                description: "Get notifications right away when money is sent or received."
+                icon: <Service />,
+                title: "Cash Withdrawals",
+                description: "Withdraw cash from your Onionloop wallet through verified Agents."
             },
             {
                 icon: <SafeIcon />,
-                title: "Secure & Encrypted",
-                description: "Your payments are private and protected. No need to type long account numbers or remember details."
+                title: "Secure Agent Verification",
+                description: "All cash transactions are completed with Agents, reducing errors and helping prevent fraud."
             }
         ]
     };
-
-
     return (
         <div className="w-full">
             <div className="w-full py-16 md:py-24 px-4 md:px-6 about-gradient min-h-[60dvh] flex items-center justify-center">
@@ -45,20 +44,19 @@ const page = () => {
                             <path d="M4 17V19" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M5 18H3" stroke="#024E44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Personal Wallets
+                        Cash Services
                     </span>
                     <h1 className="text-5xl font-bold text-black">
-                        Everyday Payments Made <span className="text-[#9BC41D]">Simple</span>
+                        Deposit and withdraw <br /> cash <span className="text-[#9BC41D]">securely</span>
                     </h1>
                     <p className="text-black text-base">
-                        Personal Wallet is a safe and digital place inside the <br className='max-lg:hidden' /> Onionloop app that holds your money.
+                        Cash Services lets you deposit or withdraw cash through verified Onionloop agents using QR codes.
                     </p>
                 </div>
             </div>
 
             {/* ========================================================================= */}
-            <FeatureSection heroData={personalWalletHero} gridData={personalWalletGrid} />;
-
+            <FeatureSection heroData={cashServiceHero} gridData={cashServiceGrid} />;
         </div>
     )
 }
