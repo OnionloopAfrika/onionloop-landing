@@ -3,7 +3,7 @@ import { ChevronDownIcon, Star } from "@/app/components/icons/svgs";
 import { faqs } from "@/app/constants/mockdata";
 import { useState } from "react";
 
-const page = () => {
+const Page = () => {
         const [openIndex, setOpenIndex] = useState<number | null>(null);
     return (
         <div className="w-full">
@@ -85,4 +85,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

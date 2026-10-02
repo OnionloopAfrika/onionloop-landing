@@ -6,7 +6,7 @@ import "aos/dist/aos.css"
 import { TickIcon } from "@/app/components/icons/svgs"
 import Image from "next/image"
 
-const page = () => {
+const Page = () => {
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -150,4 +150,4 @@ const page = () => {
     )
 }
 
-export default page;
+export default Page;
