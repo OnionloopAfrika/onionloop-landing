@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useSyncExternalStore } from "react";
 
 type Mode = "personal" | "business";
 
@@ -14,19 +14,26 @@ const ModeContext = createContext<{
   setMode: () => { },
 });
 
-export function ModeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setModeState] = useState<Mode>("personal");
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
 
-  useEffect(() => {
-    const saved = localStorage.getItem("mode");
-    if (saved === "personal" || saved === "business") {
-      setModeState(saved);
-    }
-  }, []);
+function getSnapshot(): Mode {
+  const saved = localStorage.getItem("mode");
+  return saved === "business" ? "business" : "personal";
+}
+
+function getServerSnapshot(): Mode {
+  return "personal";
+}
+
+export function ModeProvider({ children }: { children: React.ReactNode }) {
+  const mode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const setMode = useCallback((next: Mode) => {
-    setModeState(next);
     localStorage.setItem("mode", next);
+    window.dispatchEvent(new Event("storage"));
   }, []);
 
   const toggle = useCallback(() => {
