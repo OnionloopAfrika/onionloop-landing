@@ -165,7 +165,7 @@ function SuccessState() {
       </div>
       <h2 className="text-[#04907E] text-3xl font-bold mb-2">Documents Submitted!</h2>
       <p className="text-[#6C6C6C] mb-8">
-        Thank you for submitting your verification documents. We've received them successfully.
+        Thank you for submitting your verification documents. We&apos;ve received them successfully.
       </p>
 
       <div className="w-full bg-[#F9FAFB] rounded-xl p-6 text-left mb-10">
@@ -181,7 +181,7 @@ function SuccessState() {
         </p>
         <ul className="space-y-3 text-sm text-[#6C6C6C] list-disc list-inside">
           <li>Our team will review your documents within 24-48 hours.</li>
-          <li>You'll receive an email notification once verified.</li>
+          <li>You&apos;ll receive an email notification once verified.</li>
           <li>Your account will be fully activated after approval</li>
         </ul>
       </div>
