@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect } from "react"
 import Image from "next/image"
 import "aos/dist/aos.css"
 import { useMode } from "@/app/context/ModeContext"

@@ -1,10 +1,10 @@
 "use client";
 
+import React from "react";
 import { useMode } from "../../context/ModeContext";
-import React, { useEffect } from "react";
 import Image from "next/image";
 import "aos/dist/aos.css";
-import { AppleStoreIcon, AppStoreIconOld, ArrowLeft, GooglePlayBlackIcon, HeroBackground, PlayStoreIconOld, ScanIcon } from "../icons/svgs";
+import { AppleStoreIcon, AppStoreIconOld, GooglePlayBlackIcon, HeroBackground, PlayStoreIconOld, ScanIcon } from "../icons/svgs";
 
 export default function Hero() {
     const { mode } = useMode();

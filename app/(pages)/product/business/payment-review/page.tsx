@@ -1,4 +1,4 @@
-import { ActivePayment, CashIcon, ReceiptIcon, SecurityIcon } from "@/app/components/icons/svgs";
+import { ActivePayment, ReceiptIcon, SecurityIcon } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
 const page = () => {

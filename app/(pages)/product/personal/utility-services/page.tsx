@@ -1,7 +1,7 @@
-import { BellIcon, Bills, FoodsIcon, MoneyTime, RidesIcon, SafeIcon, Service } from '@/app/components/icons/svgs';
+import { Bills, FoodsIcon, RidesIcon } from '@/app/components/icons/svgs';
 import { FeatureSection } from '@/app/components/sections/Produts';
 
-const page = () => {
+const Page = () => {
 
     const utilitiesHero = {
         title: "Utility Services",
@@ -61,4 +61,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

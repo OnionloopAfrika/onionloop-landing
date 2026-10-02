@@ -7,15 +7,11 @@ import {
     BuildIcon,
     CashWorks,
     ChartIcon,
-    CloseEye,
-    GuardIcon,
     OpenEyeIcon,
-    SlashedEye,
     Star,
     TickCircle,
     TickIcon,
     TimeIcon,
-    TimerIcon,
     WarningIcon
 } from "../icons/svgs"
 import Link from "next/link"
