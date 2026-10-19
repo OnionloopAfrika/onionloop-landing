@@ -85,7 +85,7 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
           className="w-full md:w-1/2 flex justify-center relative"
           style={{overflow: "clip"}}
         >
-          <div className="absolute inset-0 bg-lime-100 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
+          <div className="absolute inset-0 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
           
           <div className="relative z-10">
             <img
