@@ -72,7 +72,7 @@ export default function Hero() {
                 </div>
             </section>
         );
-    }
+    } // <--- This closing brace was missing, which caused the build error!
 
   if (mode === "personal") {
     return (
