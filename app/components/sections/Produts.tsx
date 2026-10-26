@@ -44,7 +44,7 @@ const FeatureCard: React.FC<FeatureCardItem & { delay?: number }> = ({
         {icon}
       </div>
 
-      <h3 className="text-lg font-bold text-(--primary-light) mb-3">
+      <h3 className="text-lg font-semibold text-(--primary-light) mb-3">
         {title}
       </h3>
 
@@ -61,7 +61,7 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
 }) => {
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24 font-sans text-gray-900" >
+    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24 text-gray-900" >
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-32">
         
@@ -70,7 +70,7 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
           className="w-full md:w-1/2 space-y-4"
           style={{overflow: "clip"}}
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-(--primary-light) tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold text-(--primary-light) tracking-tight">
             {heroData.title}
           </h2>
 
@@ -104,7 +104,7 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
           className="text-center max-w-2xl mb-16 space-y-2"
           style={{overflow: "clip"}}
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-xl md:text-3xl font-semibold">
             {gridData.title}
           </h2>
 

@@ -34,7 +34,7 @@ const JoinTheLoop = () => {
                 data-aos="fade-left"
                 data-aos-delay="400"
             >
-                <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
+                <h1 className="text-white text-4xl md:text-5xl font-semibold leading-tight">
                     Join the loop. Scan. Pay. Save. Chat.
                 </h1>
                 <p className="text-white text-sm md:text-base opacity-90">

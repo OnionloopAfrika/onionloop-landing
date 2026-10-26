@@ -101,10 +101,10 @@ const Main = () => {
     const data = mode === "personal" ? personal : business
 
     return (
-        <main className="w-full max-w-6xl mx-auto mt-4 md:mt-8 pb-20">
+        <main className="w-full max-w-7xl mx-auto mt-4 md:mt-8 pb-20">
             {mode === "business" && (
                 <>
-                    <header className="w-full flex flex-col items-center justify-center">
+                    <header className="w-full flex flex-col items-center justify-center my-0 md:my-10">
                         <div
                             data-aos="fade-up"
                             className="bg-[#E6F4D7] text-[#024E44] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full mt-10 mb-6 text-sm font-medium"
@@ -114,7 +114,7 @@ const Main = () => {
                         <h1
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="text-2xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
+                            className="text-xl md:text-3xl font-semibold text-center px-4 text-(--text-main) w-full max-w-5xl"
                         >
                             Running a business in Nigeria means dealing with these daily.
                         </h1>
@@ -133,7 +133,7 @@ const Main = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    className="text-2xl md:text-4xl font-bold text-center px-4 text-(--text-main)"
+                    className="text-xl md:text-3xl font-semibold text-center px-4 text-(--text-main) w-full max-w-5xl"
                 >
                     {mode === "personal"
                         ? "Onionloop lets you make payments, receive money, and keep track of your transactions"
@@ -215,7 +215,7 @@ const cards = [
 
 function FeatureCards() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 bg-white">
             {cards.map((card) => (
                 <div
                     key={card.id}

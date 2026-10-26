@@ -28,7 +28,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav ref={navRef} className="bg-white sticky top-0 z-50 border-b border-gray-200 w-[95%] mx-auto my-2 lg:rounded-full rounded-3xl shadow-md">
+    <nav ref={navRef} className="bg-white border-b border-gray-200 max-w-7xl mx-auto my-2 lg:rounded-full rounded-3xl shadow-md">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
 
@@ -52,11 +52,11 @@ export default function Navbar() {
               Contact Us
             </a>
             {mode === "personal" ? (
-              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors">
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors font-medium">
                 Download app
               </button>
             ) : (
-              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors" onClick={() => router.push("/onboarding")}>
+              <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors font-medium" onClick={() => router.push("/onboarding")}>
                 Create your account
               </button>
             )}

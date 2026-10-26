@@ -51,7 +51,7 @@ const Accordion = () => {
                 <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-4 py-2 rounded-full mt-10 mb-6 font-medium">
                     <Star /> Questions People Often Ask
                 </div>
-                <h1 className="text-4xl max-w-3xl font-bold text-center mb-12">
+                <h1 className="text-xl md:text-3xl max-w-5xl font-semibold text-center mb-12">
                     Answers to common questions about using Onionloop for everyday payments.
                 </h1>
             </header>

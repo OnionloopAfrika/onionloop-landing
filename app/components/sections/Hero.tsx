@@ -12,7 +12,7 @@ export default function Hero() {
     if (mode === "personal") {
         return (
             <section
-                className="w-full py-16 md:py-24 px-4 md:px-6 bg-gradient min-h-[70dvh] relative overflow-hidden"
+                className="w-full mx-auto py-16 md:py-24 px-4 md:px-6 bg-gradient min-h-[70dvh] relative overflow-hidden"
             >
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
@@ -76,7 +76,7 @@ export default function Hero() {
 
     return (
         <section
-            className="w-full py-16 md:py-24 px-4 md:px-6 bg-(--primary) min-h-[70dvh] overflow-hidden"
+            className="w-full mx-auto py-16 md:py-24 px-4 md:px-6 bg-(--primary) min-h-[70dvh] overflow-hidden"
         >
             <div className="w-full bg-(--primary) absolute top-0 bottom-0 right-0 h-175 -z-1"></div>
 

@@ -13,10 +13,14 @@ export default function Shell({ children }: Readonly<{ children: React.ReactNode
 
   return (
     <div data-mode={mode} className="min-h-screen transition-colors">
-      {!isOnboarding && <Navbar />}
-      
+      {!isOnboarding && (
+        <div className="w-full px-1 py-2 sticky top-0 z-50 bg-white/5 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+          <Navbar />
+        </div>
+      )}
+
       <main className="w-full">{children}</main>
-      
+
       {!isOnboarding && <Footer />}
     </div>
   );

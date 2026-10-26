@@ -66,16 +66,16 @@ const Section = () => {
 
     const agentData = [
         {
-            title: "Earn commissions per transactions",
-            description: "Get paid for very successful cash deposit or withdrawal you process."
+            title: "Earn money per transactions",
+            description: "Get paid for every cash deposit or withdrawal you process."
         },
         {
-            title: "Cashback on completed transactions",
-            description: "Earn additional cashback on every successful transaction you complete."
+            title: "Earn cashback rewards",
+            description: "Get extra money on every transaction you complete."
         },
         {
-            title: "No POS required",
-            description: "Use the Onionloop app to serve customers,no extra hardware needed."
+            title: "No POS machine needed",
+            description: "Use the Onionloop app to serve customers, no extra equipment required."
         },
         {
             title: "Fast and reliable transactions",
@@ -83,7 +83,7 @@ const Section = () => {
         },
         {
             title: "Chat with customers",
-            description: "Communicate with customers directly to clarify or confirm transactions when needed."
+            description: "Talk to customers directly in the app to answer questions or confirm transactions."
         }
     ]
 
@@ -104,7 +104,7 @@ const Section = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    className="text-2xl md:text-4xl max-w-200 font-bold text-center p-4"
+                    className="text-xl md:text-3xl font-semibold text-center p-4 max-w-5xl w-full"
                 >
                     {mode === "personal"
                         ? "The parts of your day that involve your money with Onionloop, all in one place."
@@ -112,7 +112,7 @@ const Section = () => {
                 </h1>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto p-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto p-3">
                 {data.map((item, index) => (
                     <div
                         key={index}
@@ -127,7 +127,7 @@ const Section = () => {
                             <h3 className="text-2xl font-semibold mb-2 text-(--text-secondary)">
                                 {item.title}
                             </h3>
-                            <p className="text-(--text-tertiary) text-base">
+                            <p className="text-(--text-tertiary) text-sm">
                                 {item.description}
                             </p>
                         </div>
@@ -168,12 +168,14 @@ const Section = () => {
                             data-aos-delay="100"
                             className="text-base max-w-3xl font-normal text-(--text-main)"
                         >
-                            Onionloop Agents provide cash deposit or withdrawal service for customers. As an agent, you help customers move money between cash and their onionloop wallet, verify transaction using QR codes, and support customers when clarification is needed after a transaction
+                            Onionloop Agents provide cash.
+                            <br />
+                            As an agent, you move money between cash and customer Onionloop wallets, check transactions using QR codes, and help customers when they have questions after a transaction.
                         </h1>
                     </header>
 
                     <div style={{ overflow: "clip" }} className="w-full flex flex-col-reverse md:flex-row justify-center items-center gap-12 my-12">
-                        <div className="w-full max-w-150 space-y-6">
+                        <div className="w-full space-y-6">
                             {agentData.map((a, index) => (
                                 <div
                                     key={index}
