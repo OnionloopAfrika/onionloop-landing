@@ -1,7 +1,7 @@
-import { BellIcon, Bills, CollectorIcon, FoodsIcon, MoneyTime, OnYourOwnIcon, RidesIcon, SafeIcon, Service } from '@/app/components/icons/svgs';
+import { CollectorIcon, OnYourOwnIcon, SafeIcon } from '@/app/components/icons/svgs';
 import { FeatureSection } from '@/app/components/sections/Produts';
 
-const page = () => {
+const Page = () => {
 
     const savingsHero = {
         title: "Savings",
@@ -60,4 +60,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

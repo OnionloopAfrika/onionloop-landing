@@ -110,7 +110,7 @@ export default function Services() {
                     <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-5 py-2.5 rounded-full mb-6 font-medium text-sm md:text-base">
                         <Star /> {data.header.badge.text}
                     </div>
-                    <h1 className="text-2xl md:text-4xl lg:text-[40px] w-full font-bold text-center mb-8 md:mb-12 px-4 leading-tight">
+                    <h1 className="text-xl md:text-3xl w-full max-w-5xl font-semibold text-center mb-8 md:mb-12 px-4 leading-tight">
                         {data.header.title}
                     </h1>
                 </header>
@@ -121,7 +121,7 @@ export default function Services() {
                             <button
                                 key={tier.id}
                                 onClick={() => setActiveTier(index)}
-                                className={`md:px-4 md:py-2 p-2 rounded-full text-sm md:text-base font-medium transition-colors ${activeTier === index ? 'bg-white text-(--primary) font-bold' : 'text-[#98A2B3] hover:text-(--primary)'}`}
+                                className={`md:px-4 md:py-2 p-2 rounded-full text-sm md:text-base font-medium transition-colors ${activeTier === index ? 'bg-white text-(--primary) font-semibold' : 'text-[#98A2B3] hover:text-(--primary)'}`}
                             >
                                 {tier.name}
                             </button>
@@ -130,10 +130,10 @@ export default function Services() {
                 </div>
 
                 <div className="w-full mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 rounded-2xl border border-gray-100">
+                    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] items-center gap-4 rounded-2xl border border-gray-100">
 
-                        <div data-aos="fade-down" style={{ overflow: "clip" }} className="flex flex-col md:flex-row bg-[#F9FFE5] p-6 gap-6 rounded-2xl lg:rounded-r-none">
-                            <div className="relative w-full max-w-85 h-75 rounded-2xl overflow-hidden shrink-0 mx-auto">
+                        <div data-aos="fade-down" style={{ overflow: "clip" }} className="flex flex-col md:flex-row items-center bg-[#F9FFE5] p-6 gap-6 rounded-2xl lg:rounded-r-none h-full">
+                            <div className="relative w-full max-w-85 h-75 rounded-2xl overflow-hidden shrink-0 mx-auto flex flex-col items-center justify-center">
                                 <Image
                                     src={data.tiers[activeTier].image}
                                     alt={data.tiers[activeTier].name}
@@ -142,8 +142,8 @@ export default function Services() {
                                 />
                             </div>
 
-                            <div>
-                                <h2 className="text-2xl font-bold mb-3 text-black">
+                            <div className="flex-1">
+                                <h2 className="text-2xl font-semibold mb-3 text-black">
                                     {data.tiers[activeTier].name}
                                 </h2>
                                 <p className="text-gray-700 text-sm leading-relaxed mb-4">
@@ -170,7 +170,7 @@ export default function Services() {
                             </div>
                         </div>
 
-                        <div style={{ overflow: "clip" }} className="bg-white p-6 rounded-2xl lg:rounded-l-none">
+                        <div style={{ overflow: "clip" }} className="bg-white p-6 rounded-2xl lg:rounded-l-none h-full flex flex-col justify-center">
                             <h3 className="text-xl mb-4 font-medium text-black">How it works day-to-day</h3>
                             <hr className="my-4 border-gray-200" />
 
@@ -195,7 +195,7 @@ export default function Services() {
                     </div>
 
                     <div data-aos="zoom-in" data-aos-delay="200" className="flex justify-center mt-8">
-                        <button className="bg-[#004D40] text-white px-8 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-[#003d33] transition-colors" onClick={() => router.push("/onboarding")}>
+                        <button className="bg-[#004D40] text-white px-8 py-3 rounded-xl font-medium text-sm md:text-base hover:bg-[#003d33] transition-colors" onClick={() => router.push("/onboarding")}>
                             {data.tiers[activeTier].buttonText}
                         </button>
                     </div>

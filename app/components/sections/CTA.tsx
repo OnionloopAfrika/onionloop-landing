@@ -17,7 +17,7 @@ export default function CTA() {
                     </svg>
                     Get started
                 </div>
-                <h1 className="text-3xl md:text-5xl max-w-180 font-bold text-center px-4 text-[#CCEA6F]">
+                <h1 className="text-3xl md:text-5xl max-w-180 font-semibold text-center px-4 text-[#CCEA6F]">
                     Join the loop
                 </h1>
             </header>
@@ -41,7 +41,7 @@ export default function CTA() {
                     </div>
                 ) : (
                     <div className="px-4">
-                            <Link href={"/onboarding"} className="inline-block bg-[#F7F7F7] text-(--primary) px-8 py-4 rounded-xl font-bold hover:bg-white/80 transition-colors">
+                            <Link href={"/onboarding"} className="inline-block bg-[#F7F7F7] text-(--primary) px-8 py-4 rounded-xl font-medium hover:bg-white/80 transition-colors">
                                 Open Your  Business Account
                         </Link>
                     </div>

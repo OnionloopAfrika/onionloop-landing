@@ -41,17 +41,17 @@ export default function Footer() {
 
   const renderNewsletterInput = (isMobile: boolean) => (
     <div className={isMobile ? "w-full" : ""}>
-      <form onSubmit={handleSubscribe} className="flex gap-2 border border-gray-300 rounded-lg overflow-hidden focus-within:ring-1 focus-within:ring-(--primary)">
+      <form onSubmit={handleSubscribe} className="border border-gray-300 flex gap-2 rounded-lg overflow-hidden focus-within:ring-1 focus-within:ring-(--primary)">
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email address"
-          className="flex-1 px-3 py-3 text-sm outline-none"
+          className="flex-1 px-3 py-3 text-sm outline-none md:w-100 w-full"
         />
         <button
           type="submit"
-          className="px-4 py-3 bg-(--primary) text-white text-sm font-medium hover:bg-[#0a5a31] transition-colors whitespace-nowrap"
+          className="px-4 py-3 bg-(--primary) text-white text-sm font-medium hover:bg-[#0a5a31] border border-[#0a5a31] transition-colors whitespace-nowrap -mx-2"
         >
           Subscribe
         </button>

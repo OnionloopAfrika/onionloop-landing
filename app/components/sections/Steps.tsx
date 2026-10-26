@@ -125,7 +125,7 @@ export default function Steps() {
                     {step.icons}
                   </div>
 
-                  <h3 className="text-[#008561] text-base font-bold mb-3">{step.title}</h3>
+                  <h3 className="text-[#008561] text-base font-semibold mb-3">{step.title}</h3>
                   <p className="text-[#475467] text-sm max-w-50">
                     {step.description}
                   </p>
@@ -163,7 +163,7 @@ export default function Steps() {
                   </div>
                 )}
 
-                <h3 className="text-[#008561] text-lg font-bold mb-2">{step.title}</h3>
+                <h3 className="text-[#008561] text-lg font-semibold mb-2">{step.title}</h3>
                 <p className="text-[#475467] text-sm leading-relaxed px-4">
                   {step.description}
                 </p>

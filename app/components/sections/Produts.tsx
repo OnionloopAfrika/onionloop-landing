@@ -44,7 +44,9 @@ const FeatureCard: React.FC<FeatureCardItem & { delay?: number }> = ({
         {icon}
       </div>
 
-      <h3 className="text-lg font-bold text-(--primary-light) mb-3">{title}</h3>
+      <h3 className="text-lg font-semibold text-(--primary-light) mb-3">
+        {title}
+      </h3>
 
       <p className="text-sm text-gray-600 max-w-62.5">{description}</p>
     </div>
@@ -56,14 +58,15 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
   gridData,
 }) => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24 font-sans text-gray-900">
+    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24 text-gray-900" >
+
       <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-32">
         <div
           data-aos="fade-right"
           className="w-full md:w-1/2 space-y-4"
           style={{ overflow: "clip" }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-(--primary-light) tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold text-(--primary-light) tracking-tight">
             {heroData.title}
           </h2>
 
@@ -78,8 +81,8 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
           className="w-full md:w-1/2 flex justify-center relative"
           style={{ overflow: "clip" }}
         >
-          <div className="absolute inset-0 bg-lime-100 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
-
+          <div className="absolute inset-0 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
+          
           <div className="relative z-10">
             <img
               src={heroData.imageSrc}
@@ -96,7 +99,9 @@ export const FeatureSection: React.FC<PaymentSectionProps> = ({
           className="text-center max-w-2xl mb-16 space-y-2"
           style={{ overflow: "clip" }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold">{gridData.title}</h2>
+          <h2 className="text-xl md:text-3xl font-semibold">
+            {gridData.title}
+          </h2>
 
           <p className="text-gray-600 text-sm">{gridData.description}</p>
         </div>
