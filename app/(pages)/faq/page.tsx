@@ -1,5 +1,5 @@
 "use client"
-import { ChevronDownIcon, Star } from "@/app/components/icons/svgs";
+import { ChevronDownIcon } from "@/app/components/icons/svgs";
 import { faqs } from "@/app/constants/mockdata";
 import { useState } from "react";
 

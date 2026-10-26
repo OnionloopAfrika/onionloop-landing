@@ -1,7 +1,7 @@
-import { BellIcon, QrIcon, SafeIcon, UnifiedWallet, WalletFill } from '@/app/components/icons/svgs';
+import { BellIcon, SafeIcon, UnifiedWallet } from '@/app/components/icons/svgs';
 import { FeatureSection } from '@/app/components/sections/Produts';
 
-const page = () => {
+const Page = () => {
     const personalWalletHero = {
         title: "Personal Wallet",
         description: "Onionloop Personal wallet helps you receive money, make secure payments, track your balance in real time, and withdraw your money anytime.",
@@ -63,4 +63,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

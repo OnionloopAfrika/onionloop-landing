@@ -462,7 +462,7 @@ export const OnionLoop = () => (
 )
 
 
-export const QrIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const QrIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 9.75C1.59 9.75 1.25 9.41 1.25 9V6.5C1.25 3.6 3.61 1.25 6.5 1.25H9C9.41 1.25 9.75 1.59 9.75 2C9.75 2.41 9.41 2.75 9 2.75H6.5C4.43 2.75 2.75 4.43 2.75 6.5V9C2.75 9.41 2.41 9.75 2 9.75Z" fill="#04907E" />
         <path d="M22 9.75C21.59 9.75 21.25 9.41 21.25 9V6.5C21.25 4.43 19.57 2.75 17.5 2.75H15C14.59 2.75 14.25 2.41 14.25 2C14.25 1.59 14.59 1.25 15 1.25H17.5C20.39 1.25 22.75 3.6 22.75 6.5V9C22.75 9.41 22.41 9.75 22 9.75Z" fill="#04907E" />
@@ -494,7 +494,7 @@ export const SafeIcon = () => (
 
 )
 
-export const ScanIconFill = (props: React.SVGProps<SVGSVGElement>) => (
+export const ScanIconFill = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M22 9.75C21.59 9.75 21.25 9.41 21.25 9V7C21.25 4.42 19.58 2.75 17 2.75H7C4.42 2.75 2.75 4.42 2.75 7V9C2.75 9.41 2.41 9.75 2 9.75C1.59 9.75 1.25 9.41 1.25 9V7C1.25 3.56 3.56 1.25 7 1.25H17C20.44 1.25 22.75 3.56 22.75 7V9C22.75 9.41 22.41 9.75 22 9.75Z" fill="#04907E" />
         <path d="M17 22.75H7C3.56 22.75 1.25 20.44 1.25 17V15C1.25 14.59 1.59 14.25 2 14.25C2.41 14.25 2.75 14.59 2.75 15V17C2.75 19.58 4.42 21.25 7 21.25H17C19.58 21.25 21.25 19.58 21.25 17V15C21.25 14.59 21.59 14.25 22 14.25C22.41 14.25 22.75 14.59 22.75 15V17C22.75 20.44 20.44 22.75 17 22.75Z" fill="#04907E" />
@@ -514,7 +514,7 @@ export const WalletFill = () => (
     </svg>
 )
 
-export const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const GlobeIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.00084 14.2202H3.92084C3.31084 14.2202 2.75084 14.5302 2.43084 15.0502C2.11084 15.5602 2.08084 16.1702 2.34084 16.7102C3.57084 19.2302 5.79084 21.2102 8.43084 22.1402C8.61084 22.2002 8.81084 22.2402 9.00084 22.2402C9.35084 22.2402 9.70084 22.1302 10.0008 21.9202C10.4708 21.5902 10.7508 21.0502 10.7508 20.4802L10.7608 15.9802C10.7608 15.5102 10.5808 15.0702 10.2508 14.7402C9.91084 14.4102 9.47084 14.2202 9.00084 14.2202Z" fill="#04907E" />
         <path d="M22.4799 9.6C21.3599 4.68 17.0499 1.25 11.9999 1.25C6.94993 1.25 2.63993 4.68 1.51993 9.6C1.39993 10.12 1.51993 10.65 1.85993 11.07C2.19993 11.49 2.69993 11.73 3.23993 11.73H20.7699C21.3099 11.73 21.8099 11.49 22.1499 11.07C22.4799 10.65 22.5999 10.11 22.4799 9.6Z" fill="#04907E" />
@@ -522,7 +522,7 @@ export const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
-export const BankIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const BankIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M22 19V22H2V19C2 18.45 2.45 18 3 18H21C21.55 18 22 18.45 22 19Z" fill="#04907E" stroke="#04907E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M7 11H5V18H7V11Z" fill="#04907E" />
@@ -534,7 +534,7 @@ export const BankIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
-export const PeopleIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const PeopleIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.5291 7.77C17.4591 7.76 17.3891 7.76 17.3191 7.77C15.7691 7.72 14.5391 6.45 14.5391 4.89C14.5391 3.3 15.8291 2 17.4291 2C19.0191 2 20.3191 3.29 20.3191 4.89C20.3091 6.45 19.0791 7.72 17.5291 7.77Z" fill="#04907E" />
         <path d="M20.7896 14.6999C19.6696 15.4499 18.0996 15.7299 16.6496 15.5399C17.0296 14.7199 17.2296 13.8099 17.2396 12.8499C17.2396 11.8499 17.0196 10.8999 16.5996 10.0699C18.0796 9.86991 19.6496 10.1499 20.7796 10.8999C22.3596 11.9399 22.3596 13.6499 20.7896 14.6999Z" fill="#04907E" />

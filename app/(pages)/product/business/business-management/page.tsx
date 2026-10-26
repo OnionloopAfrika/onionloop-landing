@@ -1,7 +1,7 @@
-import { BellIcon, MessageIcon, Messaging, SafeIcon } from "@/app/components/icons/svgs";
+import { BellIcon, Messaging, SafeIcon } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
-const page = () => {
+const Page = () => {
 
     const businessManagementHero = {
         title: "Business Management",
@@ -62,4 +62,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -1,7 +1,7 @@
-import { Light, LinkCircle, Multiple, SafeIcon } from "@/app/components/icons/svgs";
+import { Light, Multiple, SafeIcon } from "@/app/components/icons/svgs";
 import { FeatureSection } from "@/app/components/sections/Produts";
 
-const page = () => {
+const Page = () => {
     const withdrawalsHero = {
         title: "Withdrawals",
         description: "Transfer money from your Business Wallet to any verified bank account with one tap. You can see if a withdrawal is processed, sent, or credited. Your balance updates right after the transfer is completed.",
@@ -60,4 +60,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { RightIcon, TickIcon } from "@/app/components/icons/svgs"
+import { RightIcon } from "@/app/components/icons/svgs"
 import Link from "next/link"
 import ContactForm from "./ContactForm"
 import Image from "next/image"
