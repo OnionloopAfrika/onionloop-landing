@@ -125,7 +125,6 @@ const Page = () => {
                 <ContactForm />
 
                 <div data-aos="zoom-in" className="w-full h-full relative">
-                    <div className="absolute inset-0 bg-lime-100 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
 
                     <Image
                         src="/contact-image.png"
