@@ -19,7 +19,7 @@ export default function ModeToggle({ onItemClick }: ModeToggleProps) {
   };
 
   return (
-    <div className="flex items-center gap-2 border border-gray-300 rounded-full p-1 bg-[#E4E7EC] text-sm relative">
+    <div className="flex items-center gap-2 rounded-full p-1 bg-[#E4E7EC] text-sm relative">
       <button
         onClick={() => selectMode("personal")}
         className={`px-3 py-1 rounded-full text-sm transition-colors ${
