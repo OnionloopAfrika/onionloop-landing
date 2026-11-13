@@ -145,7 +145,7 @@ export default function Footer() {
 
         <div className="pt-4 border-t border-dotted border-gray-300">
           <OnionLoop />
-          <p className="text-xs text-gray-600">© 2026 Onionloop. All rights reserved.</p>
+          <p className="text-xs text-gray-600 mt-10">© 2026 Onionloop. All rights reserved.</p>
         </div>
       </div>
 
@@ -213,7 +213,7 @@ export default function Footer() {
         <div className="flex justify-between items-center pt-8">
           <div>
             <OnionLoop />
-            <p className="text-xs text-gray-600">© 2026 Onionloop. All rights reserved.</p>
+            <p className="text-xs text-gray-600 mt-10">© 2026 Onionloop. All rights reserved.</p>
           </div>
 
           <div className="flex items-center gap-4">
