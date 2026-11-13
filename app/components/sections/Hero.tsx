@@ -27,18 +27,9 @@ export default function Hero() {
                             <p
                                 data-aos="fade-up"
                                 data-aos-delay="150"
-                                className="text-base md:text-lg text-(--text-main) leading-relaxed max-w-100"
-                            >
-                                Pay for everyday purchases with QR payments, all from your Onionloop wallet. Spend, save, and manage your money in one place.
-                            </p>
-
-                            <p
-                                data-aos="fade-up"
-                                data-aos-delay="150"
-                                className="text-base md:text-lg text-(--text-main) leading-relaxed max-w-100"
+                                className="text-base md:text-lg text-(--text-main) leading-relaxed max-w-150"
                             >
                                 QR payment for everyday purchases. Spend, save, and manage your money in one place.                            </p>
-
 
                             <div
                                 data-aos="fade-up"
