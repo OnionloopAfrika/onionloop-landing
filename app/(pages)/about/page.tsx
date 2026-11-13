@@ -59,17 +59,18 @@ const Page = () => {
             <div className="w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 gap-4 grid px-4 md:px-6 mt-10 mb-20 justify-center items-center">
                 {/* grid 1 */}
                 <div className="w-full max-w-110 h-full mx-auto" data-aos="fade-right">
-                    <h1 className="text-left font-bold text-4xl text-(--text-main)">We Started With A simple Question</h1>
-                    <p className="text-sm text-(--text-main)  mt-4">Why should sending money be harder than sending a message?</p>
-                    <p className="text-sm text-(--text-main) ">
+                    <h1 className="text-left font-bold text-4xl text-(--text-main)">Built on Research, not
+                        Guesswork</h1>
+                    <p className="text-sm text-(--text-main)  mt-4">Before building Onionloop, we studied everyday payment habits and found key problems. Many people manually enter account numbers, which leads to mistakes and wrong transfers. Fake payment alerts are also common, causing confusion and financial loss.</p>
+                    {/* <p className="text-sm text-(--text-main) ">
                         Why share account numbers or phone details just to get paid?
+                    </p> */}
+                    <p className="text-sm text-(--text-main)  mt-4">
+                        To solve this, Onionloop uses QR code payments, so users don&apos;t need to share bank details. This reduces errors and protects against fraud. Payments are fast, transparent, and rewarding, giving individuals and businesses full control over their transactions.
                     </p>
-                    <p className="text-sm text-(--text-main)  mt-4">Onionloop was built to make everyday payments simple. We bridge the gap between complex banking systems and how people and businesses actually move money using QR payments and secure wallets to make transactions clear, easy, and rewarding.</p>
                 </div>
                 {/* grid 2 */}
                 <div className="w-full max-w-110 h-80 relative mt-8 md:mt-0" data-aos="fade-left">
-                    <div className="absolute inset-0 bg-lime-100 transform rotate-45 scale-75 rounded-3xl -z-10 blur-xl opacity-60" />
-
                     <Image src="/AboutImage2.png" alt="Hero Personal" layout="fill" objectFit="contain" />
                 </div>
             </div>
