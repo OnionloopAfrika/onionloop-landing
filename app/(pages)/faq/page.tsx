@@ -2,6 +2,8 @@
 import { ChevronDownIcon } from "@/app/components/icons/svgs";
 import { faqs } from "@/app/constants/mockdata";
 import { useState } from "react";
+import ContactForm from "../contact/ContactForm";
+import Image from "next/image";
 
 const Page = () => {
         const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -42,8 +44,8 @@ const Page = () => {
                     </ul>
                 </div>
             </div>
-        <div className="w-full max-w-7xl mx-auto px-4 mt-10">
-            <div className="max-w-3xl mx-auto space-y-4">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-0 mt-10">
+            <div className="w-full mx-auto space-y-4">
                 {faqs.map((item, index) => {
                     const isOpen = openIndex === index;
 
@@ -81,6 +83,24 @@ const Page = () => {
                 })}
             </div>
         </div>
+            {/* ================= CONTACT FORM ================= */}
+            <div
+                data-aos="fade-up"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-7xl mx-auto px-4 md:px-6 mt-20 mb-20"
+            >
+                <ContactForm />
+
+                <div data-aos="zoom-in" className="w-full h-full relative">
+
+                    <Image
+                        src="/contact-image.png"
+                        alt="contact image"
+                        width={600}
+                        height={600}
+                        className="w-full h-full object-contain rounded-2xl"
+                    />
+                </div>
+            </div>
         </div>
     )
 }
