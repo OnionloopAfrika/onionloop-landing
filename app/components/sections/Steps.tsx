@@ -40,28 +40,28 @@ const personalSteps = [
   {
     id: 1,
     title: "Create Your Account",
-    description: "Enter your name, email, and phone number to sign up.",
+    description: "Sign up with your name, and verify your ID in few minutes.",
     image: "/personal-step-1.png",
     icons: icons.i,
   },
   {
     id: 2,
-    title: "Verify Your Identity",
-    description: "Confirm your personal details to enjoy more benefits",
+    title: "Fund Your Wallet",
+    description: "Add money by QR Payment, transfer, card, or cash deposit with any agent near you.",
     image: "/personal-step-2.png",
     icons: icons.ii,
   },
   {
     id: 3,
-    title: "Add Money To Your Wallet",
-    description: "Add money to your Onionloop wallet from your bank account or receive money from other users",
+    title: "One App. Many Possibilities.",
+    description: "Pay for anything, rides, food, bills, QR payments all from one Onionloop wallet.",
     image: "/personal-step-3.png",
     icons: icons.iii,
   },
   {
     id: 4,
-    title: "Scan & Pay",
-    description: "Scan a QR code, confirm the receiver details, and send money",
+    title: "Start Saving",
+    description: "Link a collector, or save on your own. Set a daily amount and watch it grow.",
     image: "/personal-step-4.png",
     icons: icons.iv,
   },
@@ -145,7 +145,7 @@ export default function Steps() {
           ))}
         </div>
         {/* Mobile Layout (Vertical) */}
-        <div className="md:hidden flex flex-col items-center gap-16">
+        <div className="md:hidden flex flex-col items-center gap-8">
           {steps.map((step, index) => (
             <div key={step.id} className="flex flex-col items-center text-center w-full">
               <div className="mb-8 h-87.5">
@@ -156,17 +156,17 @@ export default function Steps() {
                 <div className="mb-4 flex items-center justify-center">
                   {step.icons}
                 </div>
+                <h3 className="text-[#008561] text-lg font-semibold mb-2">{step.title}</h3>
+                <p className="text-[#475467] text-sm leading-relaxed px-4 mb-8">
+                  {step.description}
+                </p>
 
                 {index < steps.length - 1 && (
-                  <div className="h-10 w-0.5 bg-[#008561] mb-4 relative">
+                  <div className="h-20 w-0.5 bg-[#008561] mb-4 relative">
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#008561]" />
                   </div>
                 )}
 
-                <h3 className="text-[#008561] text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-[#475467] text-sm leading-relaxed px-4">
-                  {step.description}
-                </p>
               </div>
             </div>
           ))}
