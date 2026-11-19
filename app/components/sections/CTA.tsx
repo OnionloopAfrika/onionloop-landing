@@ -22,8 +22,8 @@ export default function CTA() {
                 </h1>
             </header>
 
-            <div className="w-40 h-40 md:w-100 md:h-100 rounded-full md:border-50 border-10 border-white/10 absolute -top-10 -left-10 md:top-16 md:left-[10%] pointer-events-none"></div>
-            <div className="w-40 h-40 md:w-100 md:h-100 rounded-full md:border-50 border-10 border-white/10 absolute -bottom-10 -right-10 md:bottom-16 md:right-[10%] pointer-events-none"></div>
+            <div className="w-40 h-40 md:w-100 md:h-100 rounded-full md:border-50 border-20 border-white/10 absolute -top-10 -left-10 md:top-16 md:left-[10%] pointer-events-none"></div>
+            <div className="w-40 h-40 md:w-100 md:h-100 rounded-full md:border-50 border-20 border-white/10 absolute -bottom-10 -right-10 md:bottom-16 md:right-[10%] pointer-events-none"></div>
             
             <div className="relative z-10">
                 <Steps />

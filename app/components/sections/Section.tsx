@@ -22,7 +22,7 @@ const Section = () => {
         {
             icon: <TimeIcon />,
             title: "Save Time",
-            description: "No need for your bank details or phone number to send or receive money."
+            description: "Save time and not download a new app for every service. Fund wallet, pay for anything."
         },
         {
             icon: <BuildIcon />,
