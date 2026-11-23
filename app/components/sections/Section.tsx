@@ -112,7 +112,7 @@ const Section = () => {
                 </h1>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto p-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto p-3 md:px-0">
                 {data.map((item, index) => (
                     <div
                         key={index}
@@ -154,7 +154,7 @@ const Section = () => {
             </div>
 
             {mode === "business" && (
-                <div className="w-full max-w-7xl mx-auto mt-20 p-4 border-t border-gray-100" id="agents">
+                <div className="w-full max-w-7xl mx-auto mt-20 p-4 md:px-0 border-t border-gray-100" id="agents">
                     <header className="w-full">
                         <div
                             data-aos="fade-up"

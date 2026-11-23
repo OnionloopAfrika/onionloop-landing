@@ -175,7 +175,7 @@ const Main = () => {
                     </h1>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mx-auto px-4 md:px-0">
                     {data.map((item, index) => (
                         <div
                             key={item.title}
@@ -250,7 +250,7 @@ const cards = [
 
 function FeatureCards() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 md:px-0 bg-white">
             {cards.map((card) => (
                 <div
                     key={card.id}
