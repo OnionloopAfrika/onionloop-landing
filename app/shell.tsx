@@ -16,7 +16,7 @@ export default function Shell({ children }: Readonly<{ children: React.ReactNode
       {!isOnboarding && (
         <div className="w-full p-4 sticky top-0 z-50">
           {/* Background blur and mask layer positioned behind the navbar content */}
-          <div className="absolute inset-0 bg-white/5 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] pointer-events-none" />
+          {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] pointer-events-none" /> */}
           
           {/* Navbar content wrapper sits safely above the mask, preventing dropdowns from hiding */}
           <div className="relative z-10">
