@@ -63,7 +63,7 @@ export default function Hero() {
                 </div>
             </section>
         );
-    } // <--- This closing brace was missing, which caused the build error!
+    } 
 
     return (
         <section
@@ -71,10 +71,10 @@ export default function Hero() {
         >
             <div className="w-full bg-(--primary) absolute top-0 bottom-0 right-0 h-175 -z-1"></div>
 
-            <div className="max-w-7xl mx-auto relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
                     <HeroBackground />
                 </div>
+            <div className="max-w-7xl mx-auto relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
                     <div className="space-y-4 text-center md:text-left">
