@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav ref={navRef} className="bg-white border-b border-gray-200 max-w-7xl mx-auto my-2 lg:rounded-full rounded-3xl shadow-md">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-10">
         <div className="flex items-center justify-between h-20">
 
           <div className="flex items-center gap-8">
@@ -57,7 +57,7 @@ export default function Navbar() {
               </button>
             ) : (
               <button className="bg-(--primary) text-white text-sm rounded-xl px-6 py-3 transition-colors font-medium" onClick={() => router.push("/onboarding")}>
-                Create your account
+                Open Your Business Account
               </button>
             )}
           </div>
