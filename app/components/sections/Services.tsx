@@ -137,7 +137,7 @@ export default function Services() {
             <CornerSvg className="top-0 right-0 scale-x-[-1]" />
             <CornerSvg className="bottom-0 left-0 scale-y-[-1]" />
             <CornerSvg className="bottom-0 right-0 scale-[-1]" />
-            <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
+            <div className="w-full max-w-7xl mx-auto px-4 md:px-0 relative z-10">
 
                 <header data-aos="fade-up" className="w-full flex flex-col items-center justify-center pt-8 md:pt-12">
                     <div className="bg-[#CCEA6F80] text-(--primary) flex items-center justify-center gap-2 px-5 py-2.5 rounded-full mb-6 font-medium text-sm md:text-base">
